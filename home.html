@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Amazing.Shop</title>
+    <link rel="icon" href="./img/2.png">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+
+    <!--Cart-->
+
+</head>
+
+<body>
+    <header>
+        <div class="bg_img"><img src="./img/banner_head.jpg" alt=""></div>
+        <div class="container">
+
+            <div class="heaad">
+                <div class="dau">
+                    <div class="boxlogo"><img src="img/logo_website.png" alt=""></div>
+                    <div class="search">
+                        <input type="text" placeholder="" value="Tết sale">
+                        <button> <i class="fa fa-search"></i><span>Tìm kiếm</span></button>
+                    </div>
+                    <div class="dangnhap">
+                        <button><a style="text-decoration: none; color: white;" href="admin/views/product/product.html">ADMIN</a></button>
+                    </div>
+                    <div class="dangnhap">
+                        <button>ĐĂNG NHẬP</button>
+                    </div>
+                    <div class="cart"><i class="fas fa-question-circle"></i></div>
+                    <div class="cart"><i class="fas fa-shopping-cart"></i>
+                        <div class="dot">4</div>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Trang Chủ</a></li>
+                        <li><a href="product.html">Sản Phẩm</a></li>
+                        <li class="baochi"><a href="index.html"> Chăm sóc khách hàng </a></li>
+                        <li class="baochi"><a href="index.html">Bán hàng cùng Amazing</a></li>
+                        <li class="tuyendung"><a href="index.html">Tuyển dụng</a></li>
+                        <li class="diendan"><a href="index.html">Diễn đàn</a></li>
+                    </ul>
+
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="banner">
+                <div class="page thirt">
+                    <div class="slideshow-container">
+                        <div class="mySlides fade">
+                            <img src="img/slide2.jpg" style="width:100%">
+                        </div>
+
+                    </div>
+                    <br>
+                    <div class="boxchua">
+                        <div style="text-align:center">
+                            <span class="dot" onclick="currentSlide(0)"></span>
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                            <span class="dot" onclick="currentSlide(4)"></span>
+                            <span class="dot" onclick="currentSlide(5)"></span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Show category-->
+    <section>
+        <div class="container_cgr ">
+            <div class="danhmuc ">DANH MỤC </div>
+            <div id="_cate_List"></div>
+        </div>
+    </section>
+
+
+    <!--Show prd new in week-->
+    <section>
+        <div class="rowtwo">
+            <div class="newup">
+                <div class="newinweek">SẢN PHẨM MỚI TRONG TUẦN</div>
+                <div class="viewall">XEM TẤT CẢ</div>
+            </div>
+            <hr>
+            <div id="_prd_niw"></div>
+
+            <!-- <div class="content mrrr">
+                <div class="rtimg"><img src="img/shoe/5.webp" alt=""></div>
+                <a href="#"><strong>Gìay tây nam</strong> </a>
+                <nav>Đồng Nai</nav>
+                <hr>
+                <ins>Giá : 300.000<strong>350.000</strong></ins>
+                <div class="iconbook">
+                    <a href="product_detail.html"><i class='fas fa-shopping-cart' style='font-size:15px'></i></a></div>
+            </div>
+            <div class="content mrrr">
+                <div class="rtimg"><img src="img/watch/5.webp" alt=""></div>
+                <a href="#"><strong>Đồng hồ mạ vàng nam chất lượng</strong> </a>
+                <nav>Hồ Chí Minh</nav>
+                <hr>
+                <ins>Giá : 500.000<strong>629.000</strong></ins>
+                <div class="iconbook">
+                    <a href="product_detail.html"><i class='fas fa-shopping-cart' style='font-size:15px'></i></a></div>
+            </div>
+            <div class="content mrrr">
+                <div class="rtimg"><img src="img/phone/5.webp" alt=""></div>
+                <a href="#"><strong>Xiaomi POCO mới 6g/128g chính hãng</strong> </a>
+                <nav>Hồ Chí Minh</nav>
+                <hr>
+                <ins>Giá : 5.490.000<strong>5.900.0</strong></ins>
+                <div class="iconbook">
+                    <a href="product_detail.html"><i class='fas fa-shopping-cart' style='font-size:15px'></i></a></div>
+            </div>
+            <div class="content mrrr">
+                <div class="rtimg"><img src="img/thoitrangnu/7.webp" alt=""></div>
+                <a href="#"><strong>Áo phông nữ cá tính</strong> </a>
+                <nav>Hồ Chí Minh</nav>
+                <hr>
+                <ins>Giá : 90.000<strong>120.000</strong></ins>
+                <div class="iconbook">
+                    <a href="product_detail.html"><i class='fas fa-shopping-cart' style='font-size:15px'></i></a></div>
+            </div>
+            <div class="content">
+                <div class="rtimg"><img src="img/thoitrangnam/13.webp" alt=""></div>
+                <a href="#"><strong>Áo hobdie nam chuyển màu</strong> </a>
+                <nav>Hồ Chí Minh</nav>
+                <hr>
+                <ins>Giá : 150.000<strong>160.000</strong></ins>
+                <div class="iconbook">
+                    <a href="product_detail.html"><i class='fas fa-shopping-cart' style='font-size:15px'></i></a></div>
+            </div> -->
+        </div>
+    </section>
+    <section>
+        <div class="rowsix">
+            <div class="chonloc">
+                <div class="newinweek">THƯƠNG HIỆU NỔI TIẾNG</div>
+                <div class="viewall">XEM TẤT CẢ</div>
+            </div>
+            <hr>
+            <div class="nd">
+                <img src="img/hanghieu/adidas.JPG" alt="">
+                <div class="tex">603,2k người theo dõi · 22 người đang theo dõi</div>
+            </div>
+            <div class="nd">
+                <img src="img/hanghieu/lv.JPG" alt="">
+                <div class="tex m">254,3k người theo dõi · 0 người đang theo dõi.</div>
+            </div>
+            <div class="nd">
+                <img src="img/hanghieu/modesens.JPG" alt="">
+                <div class="tex ma">447,2k người theo dõi · 71 người đang theo dõi</div>
+            </div>
+            <div class="nd">
+                <img src="img/hanghieu/jordan.JPG" alt="">
+                <div class="tex maa">1,1tr người theo dõi · 33 người đang theo dõi</div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section>
+        <div class="rowtwo bg">
+            <div class="newup">
+                <div class="newinweek">SẢN PHẨM NỔI BẬT</div>
+                <div class="viewall">XEM THÊM</div>
+            </div>
+            <hr>
+            <div class="noidung mrr">
+                <div class="rtimg"><img src="img/thoitrangnam/12.webp" alt=""></div>
+                <a class="title" href="#"><strong>Áo thun freesize nam cá tính</strong> </a>
+                <nav>Hồ Chí Minh</nav>
+                <hr>
+                <ins>Giá : 99.000<span>110.000</span><br><strong>Đánh giá : <i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i></strong></ins>
+                <div class="iconbook">
+                    <a href="product_detail.html"><i class='fas fa-shopping-cart' style='font-size:15px'></i></a></div>
+            </div>
+            <div class="noidung mrr">
+                <div class="rtimg"><img src="img/thoitrangnu/2.webp" alt=""></div>
+                <a class="title" href="#"><strong>Áo thun freesize nam cá tính</strong> </a>
+                <nav>Hồ Chí Minh</nav>
+                <hr>
+                <ins>Giá : 99.000<span>110.000</span><br><strong>Đánh giá : <i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i></strong></ins>
+                <div class="iconbook">
+                    <a href="product_detail.html"><i class='fas fa-shopping-cart' style='font-size:15px'></i></a></div>
+            </div>
+            <div class="noidung mrr">
+                <div class="rtimg"><img src="img/watch/1.webp" alt=""></div>
+                <a class="title" href="#"><strong>Áo thun freesize nam cá tính</strong> </a>
+                <nav>Hồ Chí Minh</nav>
+                <hr>
+                <ins>Giá : 99.000<span>110.000</span><br><strong>Đánh giá : <i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i></strong></ins>
+                <div class="iconbook">
+                    <a href="product_detail.html"><i class='fas fa-shopping-cart' style='font-size:15px'></i></a></div>
+            </div>
+            <div class="noidung mrr">
+                <div class="rtimg"><img src="img/thoitrangnam/2.webp" alt=""></div>
+                <a class="title" href="#"><strong>Áo thun freesize nam cá tính</strong> </a>
+                <nav>Hồ Chí Minh</nav>
+                <hr>
+                <ins>Giá : 99.000<span>110.000</span><br><strong>Đánh giá : <i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i></strong></ins>
+                <div class="iconbook">
+                    <a href="product_detail.html"><i class='fas fa-shopping-cart' style='font-size:15px'></i></a></div>
+            </div>
+            <div class="noidung">
+                <div class="rtimg"><img src="img/phone/3.webp" alt=""></div>
+                <a class="title" href="#"><strong>Áo thun freesize nam cá tính</strong> </a>
+                <nav>Hồ Chí Minh</nav>
+                <hr>
+                <ins>Giá : 99.000<span>110.000</span><br><strong>Đánh giá : <i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i></strong></ins>
+                <div class="iconbook">
+                    <a href="product_detail.html"><i class='fas fa-shopping-cart' style='font-size:15px'></i></a></div>
+            </div>
+            <div class="noidung mrr">
+                <div class="rtimg"><img src="img/thoitrangnam/5.webp" alt=""></div>
+                <a class="title" href="#"><strong>Áo thun freesize nam cá tính</strong> </a>
+                <nav>Hồ Chí Minh</nav>
+                <hr>
+                <ins>Giá : 99.000<span>110.000</span><br><strong>Đánh giá : <i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i></strong></ins>
+                <div class="iconbook">
+                    <a href="product_detail.html"><i class='fas fa-shopping-cart' style='font-size:15px'></i></a></div>
+            </div>
+            <div class="noidung mrr">
+                <div class="rtimg"><img src="img/laptop/1.webp" alt=""></div>
+                <a class="title" href="#"><strong>Áo thun freesize nam cá tính</strong> </a>
+                <nav>Hồ Chí Minh</nav>
+                <hr>
+                <ins>Giá : 99.000<span>110.000</span><br><strong>Đánh giá : <i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i></strong></ins>
+                <div class="iconbook">
+                    <a href="product_detail.html"><i class='fas fa-shopping-cart' style='font-size:15px'></i></a></div>
+            </div>
+            <div class="noidung mrr">
+                <div class="rtimg"><img src="img/thoitrangnam/3.webp" alt=""></div>
+                <a class="title" href="#"><strong>Áo thun freesize nam cá tính</strong> </a>
+                <nav>Hồ Chí Minh</nav>
+                <hr>
+                <ins>Giá : 99.000<span>110.000</span><br><strong>Đánh giá : <i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i></strong></ins>
+                <div class="iconbook">
+                    <a href="product_detail.html"><i class='fas fa-shopping-cart' style='font-size:15px'></i></a></div>
+            </div>
+            <div class="noidung mrr">
+                <div class="rtimg"><img src="img/thoitrangnam/9.webp" alt=""></div>
+                <a class="title" href="#"><strong>Áo thun freesize nam cá tính</strong> </a>
+                <nav>Hồ Chí Minh</nav>
+                <hr>
+                <ins>Giá : 99.000<span>110.000</span><br><strong>Đánh giá : <i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i></strong></ins>
+                <div class="iconbook">
+                    <a href="product_detail.html"><i class='fas fa-shopping-cart' style='font-size:15px'></i></a></div>
+            </div>
+            <div class="noidung">
+                <div class="rtimg"><img src="img/thoitrangnu/4.webp" alt=""></div>
+                <a class="title" href="#"><strong>Áo thun freesize nam cá tính</strong> </a>
+                <nav>Hồ Chí Minh</nav>
+                <hr>
+                <ins>Giá : 99.000<span>110.000</span><br><strong>Đánh giá : <i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i></strong></ins>
+                <div class="iconbook">
+                    <a href="product_detail.html"><i class='fas fa-shopping-cart' style='font-size:15px'></i></a></div>
+            </div>
+            <div class="noidung mrr">
+                <div class="rtimg"><img src="img/watch/5.webp" alt=""></div>
+                <a class="title" href="#"><strong>Áo thun freesize nam cá tính</strong> </a>
+                <nav>Hồ Chí Minh</nav>
+                <hr>
+                <ins>Giá : 99.000<span>110.000</span><br><strong>Đánh giá : <i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i></strong></ins>
+                <div class="iconbook">
+                    <a href="product_detail.html"><i class='fas fa-shopping-cart' style='font-size:15px'></i></a></div>
+            </div>
+            <div class="noidung mrr">
+                <div class="rtimg"><img src="img/watch/2.webp" alt=""></div>
+                <a class="title" href="#"><strong>Áo thun freesize nam cá tính</strong> </a>
+                <nav>Hồ Chí Minh</nav>
+                <hr>
+                <ins>Giá : 99.000<span>110.000</span><br><strong>Đánh giá : <i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i></strong></ins>
+                <div class="iconbook">
+                    <a href="product_detail.html"><i class='fas fa-shopping-cart' style='font-size:15px'></i></a></div>
+            </div>
+            <div class="noidung mrr">
+                <div class="rtimg"><img src="img/shoe/1.webp" alt=""></div>
+                <a class="title" href="#"><strong>Áo thun freesize nam cá tính</strong> </a>
+                <nav>Hồ Chí Minh</nav>
+                <hr>
+                <ins>Giá : 99.000<span>110.000</span><br><strong>Đánh giá : <i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i></strong></ins>
+                <div class="iconbook">
+                    <a href="product_detail.html"><i class='fas fa-shopping-cart' style='font-size:15px'></i></a></div>
+            </div>
+            <div class="noidung mrr">
+                <div class="rtimg"><img src="img/shoe/2.webp" alt=""></div>
+                <a class="title" href="#"><strong>Áo thun freesize nam cá tính</strong> </a>
+                <nav>Hồ Chí Minh</nav>
+                <hr>
+                <ins>Giá : 99.000<span>110.000</span><br><strong>Đánh giá : <i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i></strong></ins>
+                <div class="iconbook">
+                    <a href="product_detail.html"><i class='fas fa-shopping-cart' style='font-size:15px'></i></a></div>
+            </div>
+            <div class="noidung ">
+                <div class="rtimg"><img src="img/shoe/3.webp" alt=""></div>
+                <a class="title" href="#"><strong>Áo thun freesize nam cá tính</strong> </a>
+                <nav>Hồ Chí Minh</nav>
+                <hr>
+                <ins>Giá : 99.000<span>110.000</span><br><strong>Đánh giá : <i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i></strong></ins>
+                <div class="iconbook">
+                    <a href="product_detail.html"><i class='fas fa-shopping-cart' style='font-size:15px'></i></a></div>
+            </div>
+            <div class="noidung mrr">
+                <div class="rtimg"><img src="img/shoe/4.webp" alt=""></div>
+                <a class="title" href="#"><strong>Áo thun freesize nam cá tính</strong> </a>
+                <nav>Hồ Chí Minh</nav>
+                <hr>
+                <ins>Giá : 99.000<span>110.000</span><br><strong>Đánh giá : <i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i></strong></ins>
+                <div class="iconbook">
+                    <a href="product_detail.html"><i class='fas fa-shopping-cart' style='font-size:15px'></i></a></div>
+            </div>
+            <div class="noidung mrr">
+                <div class="rtimg"><img src="img/thoitrangnu/7.webp" alt=""></div>
+                <a class="title" href="#"><strong>Áo thun freesize nam cá tính</strong> </a>
+                <nav>Hồ Chí Minh</nav>
+                <hr>
+                <ins>Giá : 99.000<span>110.000</span><br><strong>Đánh giá : <i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i></strong></ins>
+                <div class="iconbook">
+                    <a href="product_detail.html"><i class='fas fa-shopping-cart' style='font-size:15px'></i></a></div>
+            </div>
+            <div class="noidung mrr">
+                <div class="rtimg"><img src="img/shoe/5.webp" alt=""></div>
+                <a class="title" href="#"><strong>Áo thun freesize nam cá tính</strong> </a>
+                <nav>Hồ Chí Minh</nav>
+                <hr>
+                <ins>Giá : 99.000<span>110.000</span><br><strong>Đánh giá : <i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i></strong></ins>
+                <div class="iconbook">
+                    <a href="product_detail.html"><i class='fas fa-shopping-cart' style='font-size:15px'></i></a></div>
+            </div>
+            <div class="noidung mrr">
+                <div class="rtimg"><img src="img/phone/2.webp" alt=""></div>
+                <a class="title" href="#"><strong>Áo thun freesize nam cá tính</strong> </a>
+                <nav>Hồ Chí Minh</nav>
+                <hr>
+                <ins>Giá : 99.000<span>110.000</span><br><strong>Đánh giá : <i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i></strong></ins>
+                <div class="iconbook">
+                    <a href="product_detail.html"><i class='fas fa-shopping-cart' style='font-size:15px'></i></a></div>
+            </div>
+            <div class="noidung ">
+                <div class="rtimg"><img src="img/watch/3.webp" alt=""></div>
+                <a class="title" href="#"><strong>Áo thun freesize nam cá tính</strong> </a>
+                <nav>Hồ Chí Minh</nav>
+                <hr>
+                <ins>Giá : 99.000<span>110.000</span><br><strong>Đánh giá : <i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i><i style="color: #ff9900;" class="fas fa-star"></i></strong></ins>
+                <div class="iconbook">
+                    <a href="product_detail.html"><i class='fas fa-shopping-cart' style='font-size:15px'></i></a></div>
+            </div>
+
+        </div>
+    </section>
+    <!-- <section>
+        <div class="rowone bg">
+            <div class="bangxephang">
+                <div class="danhmuc">BXH THÁNG 07/2020</div> <button class="btn"><i class='fas fa-chart-bar' style='font-size:24px'></i></button>
+                <div class="dmimg">
+                    <img src="img/rowthirtdanhmuc/c15ae0b01164ec3ab575.jpg" alt="">
+                    <div class="blur">
+                        <div class="name">ndsy0***</div>
+                        <div class="time">10,536 phút</div>
+                    </div>
+                </div>
+                <div class="xephang">
+                    <div class="number">2</div>
+                    <div class="avatar"><img src="img/rowthirtdanhmuc/top2.JPG" alt=""></div>
+                    <div class="name">sherry8***</div>
+                    <div class="time">10,013 phút</div>
+                </div>
+                <div class="xephang">
+                    <div class="number ba">3</div>
+                    <div class="avatar"><img src="img/rowthirtdanhmuc/top3.JPG" alt=""></div>
+                    <div class="name">trangiang2** </div>
+                    <div class="time baa">7,457 phút</div>
+                </div>
+                <div class="xephang">
+                    <div class="number bon">4</div>
+                    <div class="avatar"><img src="img/rowthirtdanhmuc/top4.JPG" alt=""></div>
+                    <div class="name">tunganh85***</div>
+                    <div class="time bonn">7,002 phút</div>
+                </div>
+                <div class="xephang">
+                    <div class="number nam">5</div>
+                    <div class="avatar"><img src="img/rowthirtdanhmuc/top5.JPG" alt=""></div>
+                    <div class="name">thanhtran8***</div>
+                    <div class="time nammm">6,713 phút</div>
+                </div>
+                <div class="xephang">
+                    <div class="number sau">6</div>
+                    <div class="avatar"><img src="img/rowthirtdanhmuc/top6.JPG" alt=""></div>
+                    <div class="name">huongnguyen9***</div>
+                    <div class="time sauu">6,515 phút</div>
+                </div>
+                <div class="xephang">
+                    <div class="number bay">7</div>
+                    <div class="avatar"><img src="img/rowthirtdanhmuc/top7.JPG" alt=""></div>
+                    <div class="name">thamho64***</div>
+                    <div class="time bayy">6,389 phút</div>
+                </div>
+                <div class="xephang">
+                    <div class="number tam">8</div>
+                    <div class="avatar"><img src="img/rowthirtdanhmuc/top8.JPG" alt=""></div>
+                    <div class="name">uyentran75***</div>
+                    <div class="time tamm">6,164 phút</div>
+                </div>
+                <div class="xephang">
+                    <div class="number chin">9</div>
+                    <div class="avatar"><img src="img/rowthirtdanhmuc/top9.JPG" alt=""></div>
+                    <div class="name">thiennguyen64***</div>
+                    <div class="time chinn">5,569 phút</div>
+                </div>
+                <div class="xephang">
+                    <div class="number muoi">10</div>
+                    <div class="avatar"><img src="img/rowthirtdanhmuc/top10.JPG" alt=""></div>
+                    <div class="name">huynguyen03***</div>
+                    <div class="time muoii">5,045 phút</div>
+                </div>
+                <hr>
+                <a href="#">TÌM HIỂU</a>
+            </div>
+            <div class="rowoner">
+                <div class="free">Đọc nhiều nhất</div>
+                <div class="tabview">
+                    <li class="alll">Tất cả</li>
+                    <li class="kn">Kỹ năng làm việc </li>
+                    <li class="hd">Hiện đại</li>
+                    <li class="nc">Nuôi dạy con</li>
+                    <li class="qt">Quản trị - lãnh đạo</li>
+                    <li class="truyendai">Truyện dài - Tiểu thuyết</li>
+                </div>
+                <div class="buttonn"></div>
+                <hr>
+                <div class="content mr">
+                    <div class="boximg"><img src="img/rowthirtcontent/1.jpg" alt=""></div>
+                    <div class="ct">
+                        <div class="titlee">Hỏi đáp về chủng Virus... </div>
+                        <div class="taccgia"><strong>Đang cập nhật</strong></div>
+                        <div class="heart"><i class="fa fa-heart" style="font-size:14px"></i><i class="fa fa-heart" style="font-size:14px"></i><i class="fa fa-heart" style="font-size:14px"></i><i class="fa fa-heart" style="font-size:14px"></i><i class="fa fa-heart" style="font-size:14px"></i></div>
+                        <div class="vote">64 votes</div>
+                        <div class="tomtat">Virus Corona mới <br> năm 2019 (gọi...</div>
+                    </div>
+                    <div class="iconbook"><i class='fas fa-book-open' style='font-size:15px'></i></div>
+                    <span>
+                        <div class="line"></div>
+                        <div class="chitiet">CHI TIẾT</div>
+                    </span>
+                    <div class="view">15,818 lượt xem</div>
+                </div>
+                <div class="content mr">
+                    <div class="boximg"><img src="img/rowthirtcontent/2.jpg" alt=""></div>
+                    <div class="ct">
+                        <div class="titlee">Cẩm nang phòng bệnh..</div>
+                        <div class="taccgia"><strong> ETS</strong></div>
+                        <div class="heart"><i class="fa fa-heart" style="font-size:14px"></i><i class="fa fa-heart" style="font-size:14px"></i><i class="fa fa-heart" style="font-size:14px"></i><i class="fa fa-heart" style="font-size:14px"></i><i class="fa fa-heart" style="font-size:14px"></i></div>
+                        <div class="vote">51 votes</div>
+                        <div class="tomtat">Sang xuân là thời <br> điểm virus, vi...</div>
+                    </div>
+                    <div class="iconbook"><i class='fas fa-book-open' style='font-size:15px'></i></div>
+                    <span>
+                        <div class="line"></div>
+                        <div class="chitiet">CHI TIẾT</div>
+                    </span>
+                    <div class="view">9,070 lượt xem</div>
+                </div>
+                <div class="content">
+                    <div class="boximg"><img src="img/rowthirtcontent/3.jpg" alt=""></div>
+                    <div class="ct">
+                        <div class="titlee">Content marketing tro...</div>
+                        <div class="taccgia"><strong> Randy Frisch</strong></div>
+                        <div class="heart"><i class="fa fa-heart" style="font-size:14px"></i><i class="fa fa-heart" style="font-size:14px"></i><i class="fa fa-heart" style="font-size:14px"></i><i class="fa fa-heart" style="font-size:14px"></i><i class="fa fa-heart" style="font-size:14px"></i></div>
+                        <div class="vote">63 votes</div>
+                        <div class="tomtat">Đúng như những gì <br> được nêu trong ...</div>
+                    </div>
+                    <div class="iconbook"><i class='fas fa-book-open' style='font-size:15px'></i></div>
+                    <span>
+                        <div class="line"></div>
+                        <div class="chitiet">CHI TIẾT</div>
+                    </span>
+                    <div class="view">5,229 lượt xem</div>
+                </div>
+                <div class="content mr">
+                    <div class="boximg"><img src="img/rowthirtcontent/4.jpg" alt=""></div>
+                    <div class="ct">
+                        <div class="titlee">Nghề tay trái hái ra tiền</div>
+                        <div class="taccgia"><strong>Chris Guillebeau</strong></div>
+                        <div class="heart"><i class="fa fa-heart" style="font-size:14px"></i><i class="fa fa-heart" style="font-size:14px"></i><i class="fa fa-heart" style="font-size:14px"></i><i class="fa fa-heart" style="font-size:14px"></i><i class="fa fa-heart" style="font-size:14px"></i></div>
+                        <div class="vote">191 votes</div>
+                        <div class="tomtat">Với một số người, <br> suy nghĩ nghỉ việ...</div>
+                    </div>
+                    <div class="iconbook"><i class='fas fa-book-open' style='font-size:15px'></i></div>
+                    <span>
+                        <div class="line"></div>
+                        <div class="chitiet">CHI TIẾT</div>
+                    </span>
+                    <div class="view">24,392 lượt xem</div>
+                </div>
+                <div class="content mr">
+                    <div class="boximg"><img src="img/rowthirtcontent/5.jpg" alt=""></div>
+                    <div class="ct">
+                        <div class="titlee">Bạn là ai trong mắt người khác</div>
+                        <div class="taccgia"><strong>Seth Price, Barry...</strong></div>
+                        <div class="heart"><i class="fa fa-heart" style="font-size:14px"></i><i class="fa fa-heart" style="font-size:14px"></i><i class="fa fa-heart" style="font-size:14px"></i><i class="fa fa-heart" style="font-size:14px"></i><i class="fa fa-heart" style="font-size:14px"></i></div>
+                        <div class="vote">278 votes</div>
+                        <div class="tomtat">Để thành công <br> trong thời đại bù...</div>
+                    </div>
+                    <div class="iconbook"><i class='fas fa-book-open' style='font-size:15px'></i></div>
+                    <span>
+                        <div class="line"></div>
+                        <div class="chitiet">CHI TIẾT</div>
+                    </span>
+                    <div class="view">34,143 lượt xem</div>
+                </div>
+                <div class="content">
+                    <div class="boximg"><img src="img/rowthirtcontent/6.jpg" alt=""></div>
+                    <div class="ct">
+                        <div class="titlee">Cách tạo ra những sản... </div>
+                        <div class="taccgia"><strong>Ryan Holiday</strong></div>
+                        <div class="heart"><i class="fa fa-heart" style="font-size:14px"></i><i class="fa fa-heart" style="font-size:14px"></i><i class="fa fa-heart" style="font-size:14px"></i><i class="fa fa-heart" style="font-size:14px"></i><i class="fa fa-heart" style="font-size:14px"></i></div>
+                        <div class="vote">33 votes</div>
+                        <div class="tomtat">Từ những kinh <br> nghiệm được đú...</div>
+                    </div>
+                    <div class="iconbook"><i class='fas fa-book-open' style='font-size:15px'></i></div>
+                    <span>
+                        <div class="line"></div>
+                        <div class="chitiet">CHI TIẾT</div>
+                    </span>
+                    <div class="view">5,611 lượt xem</div>
+                </div>
+                <div class="content mr">
+                    <div class="boximg"><img src="img/rowthirtcontent/7.jpg" alt=""></div>
+                    <div class="ct">
+                        <div class="titlee">Hộ chiếu tình yêu</div>
+                        <div class="taccgia"><strong>Hồ Thu Hương</strong></div>
+                        <div class="heart"><i class="fa fa-heart" style="font-size:14px"></i><i class="fa fa-heart" style="font-size:14px"></i><i class="fa fa-heart" style="font-size:14px"></i><i class="fa fa-heart" style="font-size:14px"></i><i class="fa fa-heart" style="font-size:14px"></i></div>
+                        <div class="vote">48 votes</div>
+                        <div class="tomtat">Cuốn sách là kinh<br> nghiệm yêu ngư...</div>
+                    </div>
+                    <div class="iconbook"><i class='fas fa-book-open' style='font-size:15px'></i></div>
+                    <span>
+                        <div class="line"></div>
+                        <div class="chitiet">CHI TIẾT</div>
+                    </span>
+                    <div class="view">7,541 lượt xem</div>
+                </div>
+                <div class="content mr">
+                    <div class="boximg"><img src="img/rowthirtcontent/8.jpg" alt=""></div>
+                    <div class="ct">
+                        <div class="titlee">Càng độc lập càng cao quý</div>
+                        <div class="taccgia"><strong>Vãn Tình</strong></div>
+                        <div class="heart"><i class="fa fa-heart" style="font-size:14px"></i><i class="fa fa-heart" style="font-size:14px"></i><i class="fa fa-heart" style="font-size:14px"></i><i class="fa fa-heart" style="font-size:14px"></i><i class="fa fa-heart" style="font-size:14px"></i></div>
+                        <div class="vote">341 votes</div>
+                        <div class="tomtat">Này cô gái, bất <br>luận cuộc đời ...</div>
+                    </div>
+                    <div class="iconbook"><i class='fas fa-book-open' style='font-size:15px'></i></div>
+                    <span>
+                        <div class="line"></div>
+                        <div class="chitiet">CHI TIẾT</div>
+                    </span>
+                    <div class="view">28,486 lượt xem</div>
+                </div>
+                <div class="content">
+                    <div class="boximg"><img src="img/rowthirtcontent/9.jpg" alt=""></div>
+                    <div class="ct">
+                        <div class="titlee">Digital Marketing - Kế </div>
+                        <div class="taccgia"><strong> Claudio Torres</strong></div>
+                        <div class="heart"><i class="fa fa-heart" style="font-size:14px"></i><i class="fa fa-heart" style="font-size:14px"></i><i class="fa fa-heart" style="font-size:14px"></i><i class="fa fa-heart" style="font-size:14px"></i><i class="fa fa-heart" style="font-size:14px"></i></div>
+                        <div class="vote">36 votes</div>
+                        <div class="tomtat">“Tất cả các thủ<br> thuật digitaL...</div>
+                    </div>
+                    <div class="iconbook"><i class='fas fa-book-open' style='font-size:15px'></i></div>
+                    <span>
+                        <div class="line"></div>
+                        <div class="chitiet">CHI TIẾT</div>
+                    </span>
+                    <div class="view">3,749 lượt xem</div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- <section style="min-height: 750px;">
+        <div class="rowone">
+            <div class="boxdanhmucc">
+                <div class="danhmuc">NGHE NHIỀU NHẤT</div> <button class="btn"><i class='fas fa-headphones' style='font-size:14'></i></button>
+                <hr>
+                <li>Người giỏi không phải là người làm tất cả</li><span style="color: rgb(136, 1, 1);">37,070</span>
+                <hr>
+                <li>Đánh thức con người phi thường của bạn</li> <span style="color: rgb(37, 1, 136);">26,216</span>
+                <hr>
+                <li>Nghĩ giàu làm giàu</li><span style="color: rgb(122, 136, 1);">19,601</span>
+                <hr>
+                <li>Để trở thành người bán hàng xuất sắc</li><span>19,279</span>
+                <hr>
+                <li class="bettwen">Đắc nhân tâm</li> <span>18,793</span>
+                <hr>
+                <li>Hạt giống tâm hồn - Đừng từ bỏ ước mơ</li><span>17,619</span>
+                <hr>
+                <li class="bettwen">Bí mật của may mắn</li><span>17,166</span>
+                <hr>
+                <li class="bettwen">Tư duy đột phá</li><span>17,144</span>
+                <hr>
+                <li>[Tóm tắt sách] - Một tư duy hoàn toàn mới</li><span>15,660</span>
+                <hr>
+                <li>Quẳng gánh lo đi và vui sống</li><span>11,244</span>
+                <hr>
+                <li>Hạt giống tâm hồn - Đừng từ bỏ ước mơ</li><span>17,619</span>
+                <hr>
+                <li class="bettwen">Không yêu thì biến</li><span>11,054</span>
+                <hr>
+            </div>
+            <div class="rowoner">
+                <div class="free">Sách nói</div>
+                <div class="tabvieww">
+                    <li class="allll">Tất cả</li>
+                    <li class="td">Truyện đọc </li>
+                    <li class="pt">Phát triển bản thân</li>
+                    <li class="bq">Bí quyết kinh doanh</li>
+                    <li class="hg">Hạt giống tâm hồn</li>
+                    <li class="ttn">Truyện thiếu nhi</li>
+                </div>
+                <div class="buttonn"></div>
+                <hr>
+                <div class="noidungg ml">
+                    <div class="rtimgg"><img src="img/contentsachnoi/1.jpg" alt=""></div>
+                    <a href="#"><strong>Hành tẩu âm dương - Tập 16</strong> </a>
+                    <nav>A Thất</nav>
+                    <hr>
+                    <ins>456 lượt nghe</ins>
+                    <div class="iconbookk"><i class="fa fa-play-circle" style="font-size:28px"></i></i>
+                    </div>
+                    <span>
+                        <div class="line"></div>
+                        <div class="chitiett">
+                            <span>01 giờ , 46 phút</span>
+                    <p>Sách nói , Truyện đọc</p>
+                </div>
+                </span>
+            </div>
+            <div style="margin-left: 215px;" class="noidungg ">
+                <div class="rtimgg"><img src="img/contentsachnoi/2.jpg" alt=""></div>
+                <a href="#"><strong>Nghệ thuật bán hàng bậc cao</strong> </a>
+                <nav>Zig Ziglar</nav>
+                <hr>
+                <ins>5,217 lượt nghe</ins>
+                <div class="iconbookk"><i class="fa fa-play-circle" style="font-size:28px"></i></i>
+                </div>
+                <span>
+                    <div class="line"></div>
+                    <div class="chitiett">
+                        <span> 46 phút</span>
+                <p>Sách nói , Bí quyết kinh doanh</p>
+            </div>
+            </span>
+        </div>
+        <div style="margin-left: 430px;" class="noidungg ">
+            <div class="rtimgg"><img src="img/contentsachnoi/3.jpg" alt=""></div>
+            <a href="#"><strong>Lãnh đạo và sự tự lừa dối</strong> </a>
+            <nav>Nhiều tác giả</nav>
+            <hr>
+            <ins>7,674 lượt nghe</ins>
+            <div class="iconbookk"><i class="fa fa-play-circle" style="font-size:28px"></i></i>
+            </div>
+            <span>
+                <div class="line"></div>
+                <div class="chitiett">
+                    <span>33 phút</span>
+            <p>Sách nói , Bí quyết kinh doanh</p>
+        </div>
+        </span>
+        </div>
+        <div style="margin-left: 645px;" class="noidungg ">
+            <div class="rtimgg"><img src="img/contentsachnoi/5.jpg" alt=""></div>
+            <a href="#"><strong>Tinh thần Samurai trong thế giới phẳng</strong> </a>
+            <nav>Brian Klemmer</nav>
+            <hr>
+            <ins>6,326 lượt nghe</ins>
+            <div class="iconbookk"><i class="fa fa-play-circle" style="font-size:28px"></i></i>
+            </div>
+            <span>
+                <div class="line"></div>
+                <div class="chitiett">
+                    <span>23 phút</span>
+            <p>Sách nói , Phát triển bản thân</p>
+        </div>
+        </span>
+        </div>
+        <div style="margin-top: 360px;" class="noidungg ml">
+            <div class="rtimgg"><img src="img/contentsachnoi/4.jpg" alt=""></div>
+            <a href="#"><strong>[Tóm tắt sách] - Bí mật phía sau điện toán đám..</strong> </a>
+            <nav>Marc Benioff</nav>
+            <hr>
+            <ins>4,345 lượt nghe</ins>
+            <div class="iconbookk"><i class="fa fa-play-circle" style="font-size:28px"></i></i>
+            </div>
+            <span>
+                <div class="line"></div>
+                <div class="chitiett">
+                    <span> 43 phút</span>
+            <p>Sách nói , Bí quyết kinh doanh</p>
+        </div>
+        </span>
+        </div>
+        <div style="margin-left: 215px;margin-top: 360px;" class="noidungg ">
+            <div class="rtimgg"><img src="img/contentsachnoi/6.jpg" alt=""></div>
+            <a href="#"><strong>Tư duy đột phá</strong> </a>
+            <nav>Hibino Shozo</nav>
+            <hr>
+            <ins>17,148 lượt nghe</ins>
+            <div class="iconbookk"><i class="fa fa-play-circle" style="font-size:28px"></i></i>
+            </div>
+            <span>
+            <div class="line"></div>
+            <div class="chitiett">
+                <span>16 phút</span>
+            <p>Sách nói , Phát triển bản thân</p>
+        </div>
+        </span>
+        </div>
+        <div style="margin-left: 430px;margin-top: 360px;" class="noidungg ">
+            <div class="rtimgg"><img src="img/contentsachnoi/7.jpg" alt=""></div>
+            <a href="#"><strong>Nghĩ giàu làm giàu</strong> </a>
+            <nav>Napoleon Hill</nav>
+            <hr>
+            <ins>19,612 lượt nghe</ins>
+            <div class="iconbookk"><i class="fa fa-play-circle" style="font-size:28px"></i></i>
+            </div>
+            <span>
+        <div class="line"></div>
+        <div class="chitiett">
+            <span>04 giờ , 23 phút</span>
+            <p>Sách nói , Phát triển bản thân</p>
+        </div>
+        </span>
+        </div>
+        <div style="margin-left: 645px;margin-top: 360px;" class="noidungg ">
+            <div class="rtimgg"><img src="img/contentsachnoi/8.jpg" alt=""></div>
+            <a href="#"><strong>Hoàng Hà phục yêu truyện - Tập 3</strong> </a>
+            <nav>Long Phi Có Yêu Kh</nav>
+            <hr>
+            <ins>266 lượt nghe</ins>
+            <div class="iconbookk"><i class="fa fa-play-circle" style="font-size:28px"></i></i>
+            </div>
+            <span>
+        <div class="line"></div>
+        <div class="chitiett">
+            <span>01 giờ , 16 phút</span>
+            <p>Sách nói , Truyện đọc</p>
+        </div>
+        </span>
+        </div>
+        </div>
+        </div>
+    </section>
+    <section>
+        <div class="rowfour">
+            <div class="boximgg">
+                <img src="img/rowfourbanner/0.JPG" alt="">
+            </div>
+            <div class="content">
+                <div class="truyentranh"><strong>TRUYỆN TRANH</strong></div>
+                <br>
+                <li class="lione"><img src="img/rowfourcontent/1.jpg" alt=""></li>
+                <li class="litwo"><img src="img/rowfourcontent/2.jpg" alt=""></li>
+                <li class="lithirt"><img src="img/rowfourcontent/3.jpg" alt=""></li>
+                <li class="lifour"><img src="img/rowfourcontent/4.jpg" alt=""></li>
+                <h4>Khỉ Zozo hiếu kỳ
+                    <p>H.A.Rey</p>
+                </h4>
+                <h4>Hoàng tử bé
+                    <p>Antoine De Saint-Exupéry</p>
+                </h4>
+                <h4> Sừng To Sừng Nhỏ
+                    <p>Trần Tiến</p>
+                </h4>
+                <h4>Bộ tứ siêu quậy
+                    <p>Tô Ngưng</p>
+                </h4>
+            </div>
+    </section>
+
+    <section>
+        <div class="rowfive">
+            <div class="banchay">
+                <div class="newinweek">Bán chạy nhất waka</div>
+                <div class="viewall">XEM TẤT CẢ</div>
+            </div>
+            <hr>
+            <div class="noidunggg">
+                <div class="boximggg"><img src="img/rowfive/1.jpg" alt=""></div>
+                <div class="linee"></div>
+                <p>20.000 VNĐ</p>
+            </div>
+            <div class="noidunggg">
+                <div class="boximggg"><img src="img/rowfive/2.jpg" alt=""></div>
+                <div class="linee"></div>
+                <p>35.000 VNĐ</p>
+            </div>
+            <div class="noidunggg">
+                <div class="boximggg"><img src="img/rowfive/3.jpg" alt=""></div>
+                <div class="linee"></div>
+                <p>35.000 VNĐ</p>
+            </div>
+            <div class="noidunggg">
+                <div class="boximggg"><img src="img/rowfive/4.jpg" alt=""></div>
+                <div class="linee"></div>
+                <p>35.000 VNĐ</p>
+            </div>
+            <div class="noidunggg">
+                <div class="boximggg"><img src="img/rowfive/5.jpg" alt=""></div>
+                <div class="linee"></div>
+                <p>35.000 VNĐ</p>
+            </div>
+            <div class="noidunggg">
+                <div class="boximggg"><img src="img/rowfive/6.jpg" alt=""></div>
+                <div class="linee"></div>
+                <p>0 VNĐ</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="rowfive">
+            <div class="banchay">
+                <div class="newinweek">Sách Waka khuyên đọc</div>
+                <div class="viewall">XEM TẤT CẢ</div>
+            </div>
+            <hr>
+            <div class="noidunggg">
+                <div class="boximggg"><img src="img/rowsevent/1.jpg" alt=""></div>
+                <div class="linee"></div>
+                <p>20.000 VNĐ</p>
+            </div>
+            <div class="noidunggg">
+                <div class="boximggg"><img src="img/rowsevent/2.jpg" alt=""></div>
+                <div class="linee"></div>
+                <p>60.000 VNĐ</p>
+            </div>
+            <div class="noidunggg">
+                <div class="boximggg"><img src="img/rowsevent/3.jpg" alt=""></div>
+                <div class="linee"></div>
+                <p>35.000 VNĐ</p>
+            </div>
+            <div class="noidunggg">
+                <div class="boximggg"><img src="img/rowsevent/4.jpg" alt=""></div>
+                <div class="linee"></div>
+                <p>35.000 VNĐ</p>
+            </div>
+            <div class="noidunggg">
+                <div class="boximggg"><img src="img/rowsevent/5.jpg" alt=""></div>
+                <div class="linee"></div>
+                <p>20.000 VNĐ</p>
+            </div>
+            <div class="noidunggg">
+                <div class="boximggg"><img src="img/rowsevent/6.jpg" alt=""></div>
+                <div class="linee"></div>
+                <p>35.000 VNĐ</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="nhagiakim">
+            <nav>_NHÀ GIẢ KIM, PAULO COELHO_</nav>
+            <s>"</s>
+            <p>Dường như ai cũng thông thạo đường đời của người khác , nhưng chẳng nhìn ra con đường của chính mình</p>
+        </div>
+    </section> -->
+    <footer>
+        <div class="container">
+            <div class="tthi">
+                <div class="tt">THÔNG TIN HỮU ÍCH</div>
+                <a href="#">Review truyện – Café sách</a>
+                <a href="#">Tin AMAZING</a>
+                <a href="#">Giới thiệu chung</a>
+                <a href="#">Thỏa thuận sử dụng dịch vụ</a>
+                <a href="#">Lendbox.vn</a>
+                <div class="lg"><img src="img/logo_website.png" alt=""></div>
+                <p>© AMAZING Corporation</p>
+            </div>
+            <div class="ttlh">
+                <div class="tt">THÔNG TIN LIÊN HỆ</div>
+                <div class="company">Công ty Cổ Phần Waka (AMAZING Corporation) - Tầng 3, tháp văn phòng quốc tế Hòa Bình, số 106, đường Hoàng Quốc Việt, phường Nghĩa Đô, quận Cầu Giấy, thành phố Hà Nội</div>
+                <div class="company">ĐKKD số 0108796796 do SKHĐT TP Hà Nội cấp ngày 24/06/2019 | Chịu trách nhiệm nội dung: Ông Đinh Quang Hoàng</div>
+                <div class="company">Email: support@waka.vn | Tel: 024.37918440</div>
+                <div class="company">Giấy xác nhận Đăng ký hoạt động phát hành xuất bản phẩm điện tử số 8132/XN-CXBIPH do Cục Xuất bản, In và Phát hành cấp ngày 31/12/2019</div>
+                <div class="iconfb"><i class="fa fa-facebook-f" style="font-size:15px"></i></div>
+                <div style="margin-left: 250px;" class="logobct"><img src="img/footer/bo-cong-thuong.png" alt=""></div>
+                <div class="logobct"><img src="img/footer/3.png" alt=""></div>
+            </div>
+            <div class="uddd">
+                <div class="tt">ỨNG DỤNG DI ĐỘNG</div>
+                <div class="qr"><img src="img/footer/android-qr.png" alt=""></div>
+                <div class="tet">Hệ điều hành Android <br>Phiên bản ứng dụng: 7.4 <br>Ngày đăng: 06/12/2019</div>
+                <div class="qr"><img src="img/footer/ios-qr.png" alt=""></div>
+                <div class="tet">Hệ điều hành IOS <br> Phiên bản ứng dụng: 7.4 <br> Ngày đăng: 04/12/2019</div>
+                <div class="logodma"><img src="img/footer/bo-cong-thuong.png" alt=""></div>
+            </div>
+        </div>
+    </footer>
+</body>
+<!-- <script>
+    //khai báo biến slideIndex đại diện cho slide hiện tại
+    var slideIndex;
+    // KHai bào hàm hiển thị slide
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+
+        slides[slideIndex].style.display = "block";
+        dots[slideIndex].className += " active";
+        //chuyển đến slide tiếp theo
+        slideIndex++;
+        //nếu đang ở slide cuối cùng thì chuyển về slide đầu
+        if (slideIndex > slides.length - 1) {
+            slideIndex = 0
+        }
+        //tự động chuyển đổi slide sau 5s
+        setTimeout(showSlides, 5000);
+    }
+    //mặc định hiển thị slide đầu tiên 
+    showSlides(slideIndex = 0);
+
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+</script> -->
+
+<script type="text/javascript" src="index.js"></script>
+</div>
+
+</html>

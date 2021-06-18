@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Amazing.Shop</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+
+    <!--Cart-->
+
+</head>
+
+<body>
+    <header>
+        <div class="bg_img"><img src="./img/banner_head.jpg" alt=""></div>
+        <div class="container">
+
+            <div class="heaad">
+                <div class="dau">
+                    <div class="boxlogo"><img src="img/logo_website.png" alt=""></div>
+                    <div class="search">
+                        <input type="text" placeholder="" value="Tết sale">
+                        <button> <i class="fa fa-search"></i><span>Tìm kiếm</span></button>
+                    </div>
+                    <div class="dangnhap">
+                        <button>ĐĂNG KÝ</button>
+                    </div>
+                    <div class="dangnhap">
+                        <button>ĐĂNG NHẬP</button>
+                    </div>
+                    <div class="cart"><i class="fas fa-question-circle"></i></div>
+                    <div class="cart"><i class="fas fa-shopping-cart"></i>
+                        <div class="dot">4</div>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Trang Chủ</a></li>
+                        <li><a href="product.html">Sản Phẩm</a></li>
+                        <li class="baochi"><a href="index.html"> Chăm sóc khách hàng </a></li>
+                        <li class="baochi"><a href="index.html">Bán hàng cùng Amazing</a></li>
+                        <li class="tuyendung"><a href="index.html">Tuyển dụng</a></li>
+                        <li class="diendan"><a href="index.html">Diễn đàn</a></li>
+                    </ul>
+
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-px-0">
+
+        <div style="height: 90vh;margin-top: 100px;" class="content-pay">
+            <div class="seperate-left">
+
+
+                <tbody id="tableProducts">
+
+                </tbody>
+
+                <tfoot id="total"></tfoot>
+
+
+
+            </div>
+            <div class="seperate-right">
+                <form class="" method="POST" target="_blank" enctype="application/x-www-form-urlencoded" action="init_payment.php">
+                    <div class="detail-product-bottom-item">
+                        <div class="word5">
+
+                            <input style="display:none" type='text' name="orderId" value="" class="form-control" />
+
+                            <input style="display: none" type='text' type="text" name="extraData" value="<?php echo $extraData?>" class="form-control" />
+
+                            <input style="display: none" type='text' name="orderInfo" value="" class="form-control" />
+
+                            <input style="display: none" type='text' name="notifyUrl" value="" class="form-control" />
+
+                            <input style="display: none" type='text' name="returnUrl" value="" class="form-control" />
+
+                            <div class="word-item"><strong>Địa chỉ nhận hàng</strong></div>
+                            <div class="change"><a href="#">Thay đổi</a></div>
+                        </div>
+                        <div class="word">
+                            <p>Nguyen Duc Sy</p>
+                        </div>
+                        <div class="word1">
+                            <p>1/19 Cu Chinh Lan, Phường 13, Quận Tân Bình, Hồ Chí Minh</p>
+                        </div>
+                    </div>
+                    <div class="detail-product-bottom-item">
+                        <div class="word5">
+                            <div></div>
+                            <span class="word-item">Mã Khuyến Mãi</span>
+                            <span class="change">Có thể chọn 2<span
+                    ><img
+                      class="icon"
+                      src="https://frontend.tikicdn.com/_desktop-next/static/img/mycoupon/icons-info-gray.svg"
+                      alt="info"
+                    /> </span
+                ></span>
+                        </div>
+                        <div class="word3">
+                            <p>
+                                <a href="#"><span
+                      ><img
+                        src="https://frontend.tikicdn.com/_desktop-next/static/img/mycoupon/coupon_icon.svg"
+                    /></span>
+                    Chọn hoặc nhập khuyễn mãi</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div style="height:100px" class="detail-product-bottom-item">
+              <div class="word5">
+                <div></div>
+                <span style="width: 70%" class="word-item">Phương thức thanh toán</span> 
+              </div>
+              <div  class="word3">
+          
+                    <div class="pay momo"><img src="" alt="">      
+                       
+                          <input style="float: right;margin-top:-27px;margin-left:20px" id="radio-1" name="radio" type="radio" checked>
+                          <label for="radio-1" class="radio-label"></label>
+                       
+                      </div>
+
+                    <div class="pay default"><i style="padding: 0px 5px" class="fas fa-money-bill-wave"></i>Thanh toán khi nhận hàng
+
+                    <input style="float:right" id="radio-1" name="radio" type="radio" disabled>
+                    <label for="radio-1" class="radio-label"></label>
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="detail-product-bottom-item">
+            <div class="word5">
+                <div class="word-item">Tạm Tính</div>
+                <div id="total" class="change">đ</div>
+            </div>
+            <hr />
+            <div class="word5">
+                <div class="word-item">Thành Tiền</div>
+                <div class="change"> <input style="border: none;width:100%;text-align:right" type="text" name="amount" value="1000"></div>
+
+            </div>
+            <div class="note">
+                <span class="note-item">(Đã bao gồm thuế VAT nếu có)</span>
+            </div>
+        </div>
+        <button type="submit" class="bought btn btn-primary btn-block">Tiến hành đặt hàng</button>
+
+        </form>
+        </div>
+        </div>
+
+
+        </div>
+
+        <footer>
+            <div class="container">
+                <div class="tthi">
+                    <div class="tt">THÔNG TIN HỮU ÍCH</div>
+                    <a href="#">Review truyện – Café sách</a>
+                                <a href="#">Tin AMAZING</a>
+                                <a href="#">Giới thiệu chung</a>
+                                <a href="#">Thỏa thuận sử dụng dịch vụ</a>
+                                <a href="#">Lendbox.vn</a>
+                                <div class="lg"><img src="img/logo_website.png" alt=""></div>
+                                <p>© AMAZING Corporation</p>
+                        </div>
+                        <div class="ttlh">
+                            <div class="tt">THÔNG TIN LIÊN HỆ</div>
+                            <div class="company">Công ty Cổ Phần Waka (AMAZING Corporation) - Tầng 3, tháp văn phòng quốc tế Hòa Bình, số 106, đường Hoàng Quốc Việt, phường Nghĩa Đô, quận Cầu Giấy, thành phố Hà Nội</div>
+                            <div class="company">ĐKKD số 0108796796 do SKHĐT TP Hà Nội cấp ngày 24/06/2019 | Chịu trách nhiệm nội dung: Ông Đinh Quang Hoàng</div>
+                            <div class="company">Email: support@waka.vn | Tel: 024.37918440</div>
+                            <div class="company">Giấy xác nhận Đăng ký hoạt động phát hành xuất bản phẩm điện tử số 8132/XN-CXBIPH do Cục Xuất bản, In và Phát hành cấp ngày 31/12/2019</div>
+                            <div class="iconfb"><i class="fa fa-facebook-f" style="font-size:15px"></i></div>
+                            <div style="margin-left: 250px;" class="logobct"><img src="img/footer/bo-cong-thuong.png" alt=""></div>
+                            <div class="logobct"><img src="img/footer/3.png" alt=""></div>
+                        </div>
+                        <div class="uddd">
+                            <div class="tt">ỨNG DỤNG DI ĐỘNG</div>
+                            <div class="qr"><img src="img/footer/android-qr.png" alt=""></div>
+                            <div class="tet">Hệ điều hành Android <br>Phiên bản ứng dụng: 7.4 <br>Ngày đăng: 06/12/2019</div>
+                            <div class="qr"><img src="img/footer/ios-qr.png" alt=""></div>
+                            <div class="tet">Hệ điều hành IOS <br> Phiên bản ứng dụng: 7.4 <br> Ngày đăng: 04/12/2019</div>
+                            <div class="logodma"><img src="img/footer/bo-cong-thuong.png" alt=""></div>
+                        </div>
+                    </div>
+                    <script src="cart.js"></script>
+                    </footer>
+</body>
+
+</html>

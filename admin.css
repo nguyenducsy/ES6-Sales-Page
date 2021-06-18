@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+body {
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.chinh {
+    width: 100%;
+    margin: 0 auto;
+    min-height: 1000px;
+}
+
+.boxletf {
+    width: 20%;
+    min-height: 750px;
+    float: left;
+    position: fixed;
+    background-color: #f2f4f6;
+}
+
+.name {
+    float: left;
+    font-size: 15pt;
+    margin-left: 30px;
+    color: rgb(63, 63, 63);
+    margin-top: 40px;
+}
+
+.age {
+    float: left;
+    width: 190px;
+    font-size: 10pt;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.boxletf .logoid {
+    float: left;
+    width: 60px;
+    min-height: 50px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.logoid img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.rowh {
+    margin-top: 30px;
+    margin-left: 30px;
+    width: calc(100% - 20px);
+    float: left;
+    min-height: 20px;
+    font-size: 11pt;
+    position: relative;
+    z-index: 2;
+}
+
+.rowh .hv {
+    margin-left: 10px;
+    text-decoration: none;
+    color: rgb(128, 128, 128);
+    padding-right: 10px;
+    background-color: #f2f4f6;
+}
+
+.rowh .hv::before {
+    position: absolute;
+    content: '';
+    width: 0%;
+    height: 10px;
+    border-bottom: 1px #4f7cac solid;
+    z-index: -1;
+    transition: 0.2s;
+}
+
+.rowh i {
+    width: 10%;
+    float: left;
+}
+
+.rowh .hv:hover::before {
+    width: 65%;
+    margin-left: 50px;
+}
+
+.ngoisao {
+    float: left;
+    margin-top: 25px;
+    margin-left: 100px;
+    width: 105px;
+    min-height: 22px;
+    border: none;
+    border-radius: 20px;
+    background-color: #4f7cac;
+}
+
+.ngoisao i {
+    float: left;
+    width: 15%;
+    padding: 5px 0px;
+    margin-left: 15px;
+}
+
+.ngoisao a {
+    float: left;
+    padding: 5px 3px;
+    text-decoration: none;
+    font-size: 9pt;
+    color: white;
+}
+
+.ngoisao:hover {
+    background-color: #4f7cac9f;
+}
+
+.search {
+    clear: both;
+    float: left;
+    width: 20px;
+    min-height: 20px;
+    margin-left: 35px;
+    margin-top: 50px;
+}
+
+.search i {
+    position: relative;
+}
+
+.search input {
+    float: left;
+    width: 200px;
+    margin-left: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(197, 197, 197);
+    position: absolute;
+}
+
+ins {
+    float: left;
+    margin-left: 20px;
+    margin-top: 30px;
+    font-size: 10pt;
+}
+
+.line {
+    clear: both;
+    float: left;
+    width: 2px;
+    border-radius: 5px;
+    min-height: 60px;
+    margin-left: 45px;
+    margin-top: 10px;
+    background-color: #4f7cac;
+}
+
+.buttonfb {
+    clear: both;
+    float: left;
+    width: 40px;
+    min-height: 40px;
+    margin-left: 20px;
+    margin-top: 20px;
+    border-radius: 50px;
+    background-color: white;
+}
+
+.buttonfb i {
+    padding: 8px 14px;
+    color: gray;
+}
+
+.buttonins {
+    clear: both;
+    float: left;
+    width: 40px;
+    min-height: 40px;
+    margin-left: 20px;
+    margin-top: 20px;
+    border-radius: 50px;
+    background-color: white;
+}
+
+.buttonins i {
+    padding: 10px 11px;
+    color: gray;
+}
+
+.boxright {
+    float: right;
+    width: 78%;
+    min-height: 500px;
+}
+
+.bang {
+    width: 70%;
+    float: left;
+    margin-left: 10%;
+    margin-top: 50px;
+    min-height: 500px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    float: left;
+    color: white;
+    min-height: 50px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+table th {
+    margin-top: 10px;
+    font-size: 13pt;
+}
+
+table .id {
+    float: left;
+    width: 120px;
+}
+
+table .ten {
+    float: left;
+    text-align: left;
+    width: 230px;
+}
+
+table .sort {
+    float: left;
+    width: 120px;
+}
+
+table .hot {
+    float: left;
+    width: 120px;
+}
+
+table .edit {
+    color: yellow;
+    float: left;
+    width: 120px;
+}
+
+table .xoa {
+    float: left;
+    width: 120px;
+    color: red;
+}
+
+.show .idd {
+    float: left;
+    width: 120px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.show .namee {
+    float: left;
+    text-align: left;
+    width: 230px;
+    margin-top: 10px;
+}
+
+.show .sortt {
+    float: left;
+    text-align: center;
+    width: 120px;
+    margin-top: 10px;
+}
+
+.show .hott {
+    text-align: center;
+    float: left;
+    width: 120px;
+    margin-top: 10px;
+}
+
+.show a {
+    float: left;
+    margin-top: 10px;
+    text-align: center;
+    width: 130px;
+}
+
+.name {
+    margin-top: 30px;
+}
+
+.boxletf p {
+    color: #4f7cac;
+    margin-left: 30px;
+    margin-top: 15px;
+}
+
+.ad {
+    float: left;
+    margin-top: 20px;
+    color: #1ba085;
+    width: 50%;
+}
+
+.ad strong {
+    margin-right: 20px;
+    font-style: italic;
+}

@@ -1,0 +1,221 @@
+
+
+
+/* ================ ADMIN-index =================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: "Ubuntu", sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background: #e8edf5;
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper__admin .top_navbar_admin {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    position: fixed;
+    top: 0;
+}
+
+.wrapper__admin .top_navbar_admin .logo_admin {
+    width: 250px;
+    height: 100%;
+    background: #3421c0;
+    border-bottom: 1px solid #22119d;
+}
+
+.wrapper__admin .top_navbar_admin .logo_admin a {
+    display: block;
+    /* text-align: center; */
+    font-family: "Montserrat Subrayada", sans-serif;
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    padding-top: 7px;
+}
+
+.wrapper__admin .top_navbar_admin .top_menu_admin {
+    width: calc(100% - 250px);
+    height: 100%;
+    background: rgb(255, 255, 255);
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper__admin .top_navbar_admin .top_menu_admin .home_link a {
+    display: block;
+    background: #3421c0;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.wrapper__admin .top_navbar_admin .top_menu_admin .home_link a:hover,
+.wrapper__admin .top_navbar_admin .right_info .icon_wrap:hover {
+    background: #5343c7;
+}
+
+.wrapper__admin .top_navbar_admin .right_info {
+    display: flex;
+}
+
+.wrapper__admin .top_navbar_admin .right_info .icon_wrap {
+    padding: 8px 15px;
+    border-radius: 3px;
+    background: #3421c0;
+    color: #fff;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.main_body .sidebar_menu {
+    position: fixed;
+    top: 65px;
+    left: 0;
+    background: #3421c0;
+    width: 250px;
+    height: 100%;
+    transition: all 0.3s linear;
+}
+
+.main_body .sidebar_menu .inner__sidebar_menu {
+    position: relative;
+    padding-top: 40px;
+}
+
+.main_body .sidebar_menu ul li a {
+    color: #fff;
+    font-size: 18px;
+    padding: 15px 35px;
+    display: block;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.main_body .sidebar_menu ul li a .icon {
+    margin-right: 8px;
+}
+
+.main_body .sidebar_menu ul li > a:hover {
+    background: #5343c7;
+    color: #fff;
+}
+
+.main_body .sidebar_menu ul li a.active {
+    background: #3421c0;
+    color: #fff;
+}
+
+.main_body .sidebar_menu ul li a.active:hover {
+    background: #5343c7;
+    color: #fff;
+}
+
+.main_body .sidebar_menu ul li ul li {
+    background-color: rgb(27, 33, 114);
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    margin-top: 15px;
+    right: 25px;
+    transform: translateY(-50%);
+}
+
+.main_body .sidebar_menu .hamburger {
+    position: absolute;
+    top: 5px;
+    right: -25px;
+    width: 50px;
+    height: 50px;
+    background: #e8edf5;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.main_body .sidebar_menu .inner_hamburger,
+.main_body .sidebar_menu .hamburger .arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main_body .sidebar_menu .inner_hamburger {
+    width: 40px;
+    border-radius: 50%;
+    height: 40px;
+    background: #3421c0;
+}
+
+.main_body .sidebar_menu .hamburger .arrow {
+    color: #fff;
+    font-size: 20px;
+}
+
+.main_body .sidebar_menu .hamburger .fa-long-arrow-alt-right {
+    display: none;
+}
+
+.main_body .container {
+    width: calc(100% - 250px);
+    margin-top: 65px;
+    margin-left: 250px;
+    padding: 25px 40px;
+    transition: all 0.3s linear;
+}
+
+.main_body .container .item_wrap {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.main_body .container .item_wrap .item {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    padding: 25px;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.main_body .container .item_wrap .item:first-child {
+    margin-right: 20px;
+}
+
+/* after adding active class */
+.wrapper__admin.active .sidebar_menu {
+    width: 100px;
+}
+
+.wrapper__admin.active .hamburger .fa-long-arrow-alt-right {
+    display: block;
+}
+
+.wrapper__admin.active .hamburger .fa-long-arrow-alt-left {
+    display: none;
+}
+
+.wrapper__admin.active .sidebar_menu ul li a .list {
+    display: none;
+}
+
+.wrapper__admin.active .main_body .container {
+    width: calc(100% - 100px);
+    margin-left: 100px;
+}

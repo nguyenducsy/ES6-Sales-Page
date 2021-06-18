@@ -1,0 +1,1892 @@
+                                            @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+                                            @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+                                            body {
+                                                width: 100%;
+                                                margin: 0px;
+                                                background-color: #f5f5f5;
+                                                font-family: 'Open Sans', sans-serif;
+                                            }
+                                            
+                                            .container {
+                                                width: 75%;
+                                                margin: 0 auto;
+                                                text-align: center;
+                                                background-color: rgb(51, 24, 24);
+                                            }
+                                            
+                                            .heaad {
+                                                width: 100%;
+                                                float: left;
+                                                min-height: 90px;
+                                            }
+                                            
+                                            header {
+                                                width: 100%;
+                                                float: left;
+                                                top: 0px;
+                                                position: fixed;
+                                                height: 100px;
+                                                z-index: 999;
+                                                box-shadow: rgb(126, 126, 126) 0px 2px 5px;
+                                            }
+                                            
+                                            .bg_img {
+                                                position: absolute;
+                                                z-index: -10;
+                                                width: 100%;
+                                            }
+                                            
+                                            .bg_img img {
+                                                width: 100%;
+                                                height: 100px;
+                                                object-fit: cover;
+                                            }
+                                            
+                                            .dau {
+                                                width: 100%;
+                                                float: left;
+                                                min-height: 48px;
+                                            }
+                                            
+                                            .boxlogo {
+                                                float: left;
+                                                width: 14%;
+                                            }
+                                            
+                                            .boxlogo img {
+                                                width: 100%;
+                                            }
+                                            
+                                            .search input {
+                                                width: 30%;
+                                                min-height: 27px;
+                                                float: left;
+                                                color: #ff9900;
+                                                border: none;
+                                                border-radius: 1px;
+                                                margin-top: 15px;
+                                                margin-left: 5%;
+                                                padding: 0px 10px;
+                                            }
+                                            
+                                            .search button {
+                                                background-color: #ff7300e8;
+                                                width: 9%;
+                                                min-height: 28px;
+                                                border: none;
+                                                border-radius: 2px;
+                                                float: left;
+                                                color: rgb(236, 236, 236);
+                                                margin-top: 15px;
+                                            }
+                                            
+                                            .search button:hover {
+                                                transition: 0.4s;
+                                                background-color: #ff9900;
+                                            }
+                                            
+                                            .search button span {
+                                                float: left;
+                                                padding: 5px 2px;
+                                                color: white;
+                                            }
+                                            
+                                            .search button i {
+                                                font-size: 18px;
+                                                float: left;
+                                                padding: 3px 2px;
+                                            }
+                                            
+                                            .dangnhap {
+                                                float: left;
+                                                width: 10%;
+                                                min-height: 25px;
+                                                margin-left: 3%;
+                                                margin-top: 15px;
+                                                border-radius: 2px;
+                                            }
+                                            
+                                            .dangnhap button {
+                                                padding: 5px 16px;
+                                                font-size: 10pt;
+                                                border-radius: 2px;
+                                                color: white;
+                                                background-color: #ff9900;
+                                                border: none;
+                                                text-align: center;
+                                            }
+                                            
+                                            .dangnhap button:hover {
+                                                background-color: #ff7300e8;
+                                                transition: 0.4s;
+                                            }
+                                            
+                                            .cart {
+                                                width: 5%;
+                                                border-radius: 20px;
+                                                margin-top: 16px;
+                                                float: right;
+                                                position: relative;
+                                            }
+                                            
+                                            .cart:hover .boxcart {
+                                                background-color: #0b5ed7;
+                                            }
+                                            
+                                            .cart i {
+                                                font-size: 21px;
+                                                color: white;
+                                            }
+                                            
+                                            .cart .dot {
+                                                width: 15px;
+                                                height: 15px;
+                                                top: -3px;
+                                                right: 5px;
+                                                color: white;
+                                                border: 0.5px white solid;
+                                                position: absolute;
+                                                border-radius: 15px;
+                                                float: right;
+                                                font-size: 8pt;
+                                                background-color: rgb(226, 9, 9);
+                                            }
+                                            
+                                            nav {
+                                                width: 100%;
+                                                float: left;
+                                                margin-top: -15px;
+                                                margin-left: 170px;
+                                            }
+                                            
+                                            nav ul {
+                                                list-style: none;
+                                                float: left;
+                                                font-family: 'Open Sans', sans-serif;
+                                                width: 100%;
+                                                font-size: 10pt;
+                                                margin-top: 0px;
+                                            }
+                                            
+                                            nav ul li {
+                                                float: left;
+                                                width: 9%;
+                                                margin-left: 10px;
+                                                color: rgb(3, 3, 3);
+                                                text-align: center;
+                                            }
+                                            
+                                            nav ul li a {
+                                                text-decoration: none;
+                                                color: rgba(255, 255, 255, 0.808);
+                                                font-size: 10pt;
+                                                font-family: Arial, Helvetica, sans-serif;
+                                            }
+                                            
+                                            nav ul li a:hover {
+                                                opacity: 0.6;
+                                                transition: 0.4s;
+                                            }
+                                            
+                                            nav ul .baochi {
+                                                width: 13%;
+                                                margin-right: 10px;
+                                            }
+                                            
+                                            nav ul .tuyendung {
+                                                width: 8%;
+                                            }
+                                            
+                                            nav ul .diendan {
+                                                width: 8%;
+                                                position: relative;
+                                            }
+                                            
+                                            .banner {
+                                                float: left;
+                                                margin-top: 130px;
+                                            }
+                                            
+                                            .rowone {
+                                                text-align: center;
+                                                width: 75%;
+                                                margin: 0 auto;
+                                                min-height: 650px;
+                                                margin-top: 50px;
+                                                clear: both;
+                                            }
+                                            
+                                            .boxdanhmuc .danhmuc a {
+                                                float: left;
+                                                text-align: left;
+                                                font-size: 12pt;
+                                                width: 60%;
+                                                font-weight: 700;
+                                                color: rgb(17, 17, 17);
+                                                text-decoration: none;
+                                                margin-left: 12px;
+                                                font-family: 'Open Sans', sans-serif;
+                                                margin-top: 10px;
+                                            }
+                                            
+                                            .boxdanhmuc .btn {
+                                                border: none;
+                                                float: right;
+                                                margin-right: 10px;
+                                                margin-top: 10px;
+                                                color: rgb(70, 69, 69);
+                                                font-size: 18px;
+                                                background-color: #ffffff;
+                                            }
+                                            
+                                            .boxdanhmuc li {
+                                                float: left;
+                                                text-align: left;
+                                                list-style: none;
+                                                width: 65%;
+                                                color: rgb(36, 36, 36);
+                                                margin-left: 13px;
+                                                margin-top: 10px;
+                                                font-size: 10pt;
+                                            }
+                                            
+                                            .boxdanhmuc li:hover {
+                                                color: #3c9785;
+                                            }
+                                            
+                                            .boxdanhmuc span {
+                                                width: 25%;
+                                                text-align: right;
+                                                font-size: 9pt;
+                                                color: rgb(122, 122, 122);
+                                                margin-top: 8px;
+                                                float: left;
+                                            }
+                                            
+                                            .boxdanhmuc hr {
+                                                min-height: 1px;
+                                                border: none;
+                                                background-color: rgba(214, 214, 214, 0.808);
+                                                width: calc(100% - 27px);
+                                                float: left;
+                                                margin-top: 3px;
+                                                margin-bottom: 0px;
+                                                margin-left: 13px;
+                                            }
+                                            
+                                            .rowoner {
+                                                width: calc(100% - 25.5%);
+                                                float: left;
+                                                margin-left: 3%;
+                                                min-height: 500px;
+                                                background-color: #f9fafb;
+                                            }
+                                            
+                                            .free {
+                                                float: left;
+                                                width: 17%;
+                                                text-align: left;
+                                                font-size: 14pt;
+                                                font-weight: 600;
+                                                min-height: 50px;
+                                                color: rgb(68, 68, 68);
+                                                margin-top: 10px;
+                                            }
+                                            
+                                            .tabfree {
+                                                width: 55%;
+                                                float: left;
+                                                margin-left: 28%;
+                                                min-height: 50px;
+                                            }
+                                            
+                                            .tabfree li a {
+                                                float: left;
+                                                text-align: center;
+                                                width: 70px;
+                                                text-decoration: none;
+                                                margin-top: 25px;
+                                                margin-right: 11px;
+                                                font-size: 10pt;
+                                                list-style: none;
+                                            }
+                                            
+                                            .tabfree li:hover {
+                                                color: #3c9785;
+                                            }
+                                            
+                                            .tabfree .sachnoi {
+                                                float: left;
+                                                text-align: right;
+                                                margin-right: 0px;
+                                                width: 60px;
+                                            }
+                                            
+                                            .tabfree .all {
+                                                color: #3c9785;
+                                            }
+                                            
+                                            .rowoner hr {
+                                                margin-top: 60px;
+                                                min-height: 0.5px;
+                                                border: none;
+                                                background-color: rgb(241, 241, 241);
+                                            }
+                                            
+                                            .rowoner .button {
+                                                width: 40px;
+                                                float: left;
+                                                box-shadow: #3c9785 2px 0px 8px;
+                                                margin-top: 5px;
+                                                margin-left: 253px;
+                                                min-height: 5px;
+                                                border-radius: 1px;
+                                                background-color: #3c9785;
+                                            }
+                                            
+                                            .rowoner .content {
+                                                float: left;
+                                                width: 267px;
+                                                position: relative;
+                                                margin-top: 50px;
+                                                border: 1px #bebebe00 solid;
+                                                border-radius: 2px;
+                                                min-height: 195px;
+                                                background-color: #ffffff;
+                                                box-shadow: rgba(70, 70, 70, 0.479) 0px 0px 5px;
+                                            }
+                                            
+                                            .mr {
+                                                margin-right: 20px;
+                                            }
+                                            
+                                            .mrrr {
+                                                margin-right: 2%;
+                                            }
+                                            
+                                            .mrr {
+                                                margin-right: 2.5%;
+                                            }
+                                            
+                                            .ml {
+                                                margin-left: 20px;
+                                            }
+                                            
+                                            .rowoner .content .ct {
+                                                width: 45%;
+                                                margin-top: 10px;
+                                                text-align: left;
+                                                min-height: 100px;
+                                                float: right;
+                                            }
+                                            
+                                            .rowoner .content .titlee {
+                                                font-size: 10pt;
+                                                color: black;
+                                                min-height: 40px;
+                                            }
+                                            
+                                            .content .taccgia {
+                                                font-size: 9pt;
+                                                margin-top: 5px;
+                                                color: rgba(128, 128, 128, 0.753);
+                                            }
+                                            
+                                            .content .heart i {
+                                                margin-right: 2px;
+                                                color: #f1b443;
+                                            }
+                                            
+                                            .content .vote {
+                                                font-size: 8pt;
+                                                padding: 2px 0px;
+                                                color: gray;
+                                            }
+                                            
+                                            .content .tomtat {
+                                                font-size: 9pt;
+                                                line-height: 20px;
+                                                color: gray;
+                                            }
+                                            
+                                            .content .boximg {
+                                                width: 120px;
+                                                float: left;
+                                                margin-top: -20px;
+                                                top: 0px;
+                                                position: absolute;
+                                                left: 0px;
+                                                min-height: 170px;
+                                                margin-left: 15px;
+                                            }
+                                            
+                                            .content .boximg img {
+                                                width: 100%;
+                                                box-shadow: gray 0px 0px 8px;
+                                            }
+                                            
+                                            .content .line {
+                                                width: 90%;
+                                                margin-left: 15px;
+                                                float: left;
+                                                min-height: 1.5px;
+                                                margin-top: 10px;
+                                                position: absolute;
+                                                background-color: rgb(241, 241, 241);
+                                            }
+                                            
+                                            .content .chitiet {
+                                                float: left;
+                                                width: 80px;
+                                                margin-top: 0px;
+                                                margin-left: 180px;
+                                                border-radius: 2px;
+                                                min-height: 20px;
+                                                color: white;
+                                                font-size: 10pt;
+                                                display: none;
+                                                position: relative;
+                                                background-color: #3c9785;
+                                            }
+                                            
+                                            .content .view {
+                                                float: left;
+                                                width: 30%;
+                                                color: gray;
+                                                text-align: left;
+                                                font-size: 8pt;
+                                                margin-left: 15px;
+                                                min-height: 10px;
+                                            }
+                                            
+                                            .content span {
+                                                min-height: 20px;
+                                                margin-top: 10px;
+                                                float: left;
+                                                width: 100%;
+                                            }
+                                            
+                                            .content .iconbook {
+                                                float: left;
+                                                width: 30px;
+                                                min-height: 30px;
+                                                border-radius: 30px;
+                                                position: relative;
+                                                margin-left: 65px;
+                                                background-color: #3c9785;
+                                                margin-top: 50px;
+                                                color: white;
+                                                display: none;
+                                            }
+                                            
+                                            .content .iconbook i {
+                                                color: white;
+                                            }
+                                            
+                                            .content:hover .iconbook {
+                                                display: block;
+                                            }
+                                            
+                                            .content:hover .chitiet {
+                                                display: block;
+                                            }
+                                            
+                                            .rowoner .content:hover {
+                                                border: 1px #3c9785 solid;
+                                                transition: 0.5s;
+                                            }
+                                            
+                                            .rowtwo {
+                                                background-color: white;
+                                                text-align: center;
+                                                width: 75%;
+                                                margin: 0 auto;
+                                                margin-bottom: 50px;
+                                                min-height: 450px;
+                                                clear: both;
+                                            }
+                                            
+                                            .rowtwo .newup {
+                                                float: left;
+                                                min-height: 50px;
+                                                width: 100%;
+                                            }
+                                            
+                                            .newup .newinweek {
+                                                float: left;
+                                                padding: 20px 10px;
+                                                text-align: left;
+                                                color: gray;
+                                                font-weight: 600;
+                                            }
+                                            
+                                            .newup .viewall {
+                                                float: right;
+                                                padding: 20px 10px;
+                                                font-size: 10pt;
+                                                color: #ff9900;
+                                                font-weight: 600;
+                                            }
+                                            
+                                            .rowtwo .content {
+                                                float: left;
+                                                width: calc(15% - 2px);
+                                                min-height: 280px;
+                                                border: 1px #bebebe00 solid;
+                                                text-align: left;
+                                                border-radius: 5px;
+                                                margin-top: 20px;
+                                                background-color: #ffffff;
+                                                box-shadow: gray 0px 0px 5px;
+                                            }
+                                            
+                                            .rowtwo .noidung {
+                                                float: left;
+                                                width: calc(18% - 2px);
+                                                min-height: 338px;
+                                                border: 1px #bebebe00 solid;
+                                                text-align: left;
+                                                border-radius: 5px;
+                                                margin-bottom: 20px;
+                                                background-color: #ffffff;
+                                                box-shadow: gray 0px 0px 5px;
+                                            }
+                                            
+                                            .noidung:hover {
+                                                border: 1px #3c9785 solid;
+                                                transition: 0.5s;
+                                            }
+                                            
+                                            .content:hover {
+                                                border: 1px #3c9785 solid;
+                                                transition: 0.5s;
+                                            }
+                                            
+                                            .noidung .rtimg img {
+                                                width: 100%;
+                                                border-top-left-radius: 5px;
+                                                border-top-right-radius: 5px;
+                                                position: relative;
+                                            }
+                                            
+                                            .content .rtimg img {
+                                                width: 100%;
+                                                border-top-left-radius: 5px;
+                                                border-top-right-radius: 5px;
+                                                position: relative;
+                                            }
+                                            
+                                            .rowtwo hr {
+                                                width: 97%;
+                                                min-height: 1px;
+                                                text-align: center;
+                                                border: none;
+                                                margin-bottom: 20px;
+                                                background-color: rgb(241, 241, 241);
+                                                margin: 0 auto;
+                                            }
+                                            
+                                            .noidung .title {
+                                                text-decoration: none;
+                                                float: left;
+                                                color: rgb(49, 49, 49);
+                                                padding: 0px 10px;
+                                                font-size: 11pt;
+                                                min-height: 40px;
+                                                width: 85%;
+                                            }
+                                            
+                                            .iconbook a {
+                                                color: white;
+                                            }
+                                            
+                                            .content .iconbook a {
+                                                min-height: 30px;
+                                                padding: 0px 0px;
+                                            }
+                                            
+                                            .content a {
+                                                text-decoration: none;
+                                                float: left;
+                                                color: rgb(49, 49, 49);
+                                                padding: 0px 5px;
+                                                font-size: 11pt;
+                                                min-height: 40px;
+                                                width: 85%;
+                                            }
+                                            
+                                            .noidung nav {
+                                                float: left;
+                                                margin-top: 5px;
+                                                width: 90%;
+                                                color: rgb(48, 48, 48);
+                                                font-size: 9pt;
+                                                margin-left: 10px;
+                                                min-height: 20px;
+                                            }
+                                            
+                                            .content nav {
+                                                float: left;
+                                                margin-top: 5px;
+                                                width: 90%;
+                                                color: rgb(48, 48, 48);
+                                                font-size: 9pt;
+                                                margin-left: 10px;
+                                                min-height: 20px;
+                                            }
+                                            
+                                            .noidung hr {
+                                                float: left;
+                                                width: 88%;
+                                                margin-left: 6%;
+                                                min-height: 0.5px;
+                                                margin-top: 3px;
+                                                border: none;
+                                                background-color: rgb(241, 241, 241);
+                                            }
+                                            
+                                            .content hr {
+                                                float: left;
+                                                width: 88%;
+                                                margin-left: 6%;
+                                                min-height: 0.5px;
+                                                margin-top: 3px;
+                                                border: none;
+                                                background-color: rgb(241, 241, 241);
+                                            }
+                                            
+                                            .noidung ins {
+                                                text-decoration: none;
+                                                font-size: 10pt;
+                                                margin-left: 10px;
+                                                float: left;
+                                                font-weight: 600;
+                                                color: #ff9900;
+                                                margin-top: 5px;
+                                            }
+                                            
+                                            .content ins {
+                                                text-decoration: none;
+                                                font-size: 11pt;
+                                                margin-left: 10px;
+                                                float: left;
+                                                font-weight: 600;
+                                                color: #ff9900;
+                                                margin-top: 5px;
+                                            }
+                                            
+                                            .noidung ins span {
+                                                text-decoration: line-through;
+                                                padding: 0px 5px;
+                                                color: rgb(63, 63, 63);
+                                            }
+                                            
+                                            .content ins strong {
+                                                color: gray;
+                                                margin-left: 5px;
+                                                font-size: 11pt;
+                                                text-decoration: line-through;
+                                            }
+                                            
+                                            .content:hover .iconbook {
+                                                display: block;
+                                                transition: 1s;
+                                            }
+                                            
+                                            .noidung ins strong {
+                                                color: gray;
+                                                font-size: 9pt;
+                                            }
+                                            
+                                            .noidung:hover .iconbook {
+                                                display: block;
+                                                transition: 1s;
+                                            }
+                                            
+                                            .noidung .iconbook i {
+                                                padding: 8px 7px;
+                                            }
+                                            
+                                            .noidung .iconbook {
+                                                float: left;
+                                                width: 30px;
+                                                min-height: 30px;
+                                                border-radius: 30px;
+                                                position: absolute;
+                                                margin-left: 160px;
+                                                background-color: #ff9900;
+                                                margin-top: 30px;
+                                                color: white;
+                                                display: none;
+                                            }
+                                            
+                                            .content .iconbook {
+                                                float: left;
+                                                width: 30px;
+                                                min-height: 30px;
+                                                border-radius: 30px;
+                                                position: absolute;
+                                                margin-left: 60px;
+                                                background-color: #ff9900;
+                                                margin-top: -130px;
+                                                color: white;
+                                                display: none;
+                                            }
+                                            
+                                            .content .iconbook i {
+                                                padding: 8px 7px;
+                                            }
+                                            
+                                            .content .iconbook {
+                                                float: left;
+                                                width: 30px;
+                                                min-height: 30px;
+                                                border-radius: 30px;
+                                                position: absolute;
+                                                margin-left: 130px;
+                                                background-color: #ff9900;
+                                                margin-top: 30px;
+                                                color: white;
+                                                display: none;
+                                            }
+                                            
+                                            .bangxephang {
+                                                float: left;
+                                                width: 22.5%;
+                                                border-radius: 5px;
+                                                min-height: 610px;
+                                                box-shadow: gray 0px 0px 3px;
+                                                background-color: #ffffff;
+                                            }
+                                            
+                                            .bangxephang .danhmuc {
+                                                float: left;
+                                                font-size: 12pt;
+                                                width: 70%;
+                                                font-weight: 700;
+                                                margin-left: 0px;
+                                                font-family: 'Open Sans', sans-serif;
+                                                margin-top: 10px;
+                                            }
+                                            
+                                            .bangxephang .btn {
+                                                border: none;
+                                                float: right;
+                                                margin-right: 10px;
+                                                margin-top: 10px;
+                                                color: rgb(70, 69, 69);
+                                                font-size: 18px;
+                                                background-color: #ffffff;
+                                            }
+                                            
+                                            .dmimg {
+                                                width: 100%;
+                                                float: left;
+                                                min-height: 123px;
+                                            }
+                                            
+                                            .dmimg img {
+                                                width: 100%;
+                                                position: relative;
+                                            }
+                                            
+                                            .dmimg .blur {
+                                                float: left;
+                                                width: 16.9%;
+                                                position: absolute;
+                                                min-height: 60px;
+                                                margin-top: -60px;
+                                                background-color: #ffffff;
+                                                opacity: 0.8;
+                                            }
+                                            
+                                            .dmimg .blur .name {
+                                                float: left;
+                                                margin-left: 20px;
+                                                margin-top: 20px;
+                                                color: rgb(55, 94, 177);
+                                                font-family: 'Lato', sans-serif;
+                                            }
+                                            
+                                            .dmimg .blur .time {
+                                                float: right;
+                                                margin-right: 10px;
+                                                font-size: 10pt;
+                                                margin-top: 30px;
+                                                color: rgb(55, 94, 177);
+                                                font-family: 'Lato', sans-serif;
+                                            }
+                                            
+                                            .xephang {
+                                                width: 100%;
+                                                float: left;
+                                                min-height: 80px;
+                                            }
+                                            
+                                            .xephang .number {
+                                                width: 10%;
+                                                float: left;
+                                                color: rgb(255, 153, 0);
+                                                margin-top: 30px;
+                                                margin-left: 20px;
+                                                border: rgb(255, 153, 0) 1px solid;
+                                            }
+                                            
+                                            .xephang .avatar {
+                                                float: left;
+                                                border-radius: 30px;
+                                                width: 40px;
+                                                margin-top: 35px;
+                                                margin-left: 10px;
+                                            }
+                                            
+                                            .xephang .avatar img {
+                                                width: 100%;
+                                                border-radius: 30px;
+                                            }
+                                            
+                                            .xephang .name {
+                                                font-size: 10pt;
+                                                float: left;
+                                                margin-top: 30px;
+                                                margin-left: 10px;
+                                            }
+                                            
+                                            .xephang .time {
+                                                float: right;
+                                                margin-right: 10px;
+                                                font-size: 10pt;
+                                                margin-top: 70px;
+                                                color: rgb(255, 153, 0);
+                                                font-family: 'Lato', sans-serif;
+                                            }
+                                            
+                                            .xephang .ba {
+                                                color: rgb(33, 33, 112);
+                                                border: rgb(33, 33, 112) 1px solid;
+                                            }
+                                            
+                                            .xephang .baa {
+                                                color: rgb(33, 33, 112);
+                                                margin-top: 20px;
+                                            }
+                                            
+                                            .xephang .bon {
+                                                color: #8dd0c7;
+                                                border: #8dd0c7 1px solid;
+                                            }
+                                            
+                                            .xephang .bonn {
+                                                color: #8dd0c7;
+                                                margin-top: 20px;
+                                            }
+                                            
+                                            .xephang .nam {
+                                                color: #6980a2;
+                                                border: #6980a2 1px solid;
+                                            }
+                                            
+                                            .xephang .nammm {
+                                                color: #6980a2;
+                                                margin-top: 20px;
+                                            }
+                                            
+                                            .xephang .sau {
+                                                color: #db5877;
+                                                border: #db5877 1px solid;
+                                            }
+                                            
+                                            .xephang .sauu {
+                                                color: #db5877;
+                                                margin-top: 20px;
+                                            }
+                                            
+                                            .xephang .bayy {
+                                                margin-top: 20px;
+                                            }
+                                            
+                                            .xephang .tam {
+                                                color: #60bbc5;
+                                                border: #60bbc5 1px solid;
+                                            }
+                                            
+                                            .xephang .tamm {
+                                                color: #60bbc5;
+                                                margin-top: 20px;
+                                            }
+                                            
+                                            .xephang .chin {
+                                                color: #6980a2;
+                                                border: #6980a2 1px solid;
+                                            }
+                                            
+                                            .xephang .chinn {
+                                                color: #6980a2;
+                                                margin-top: 20px;
+                                            }
+                                            
+                                            .xephang .muoi {
+                                                color: #f9b44d;
+                                                border: #f9b44d 1px solid;
+                                            }
+                                            
+                                            .xephang .muoii {
+                                                color: #f9b44d;
+                                                margin-top: 20px;
+                                            }
+                                            
+                                            .bangxephang hr {
+                                                float: left;
+                                                min-height: 1px;
+                                                border: none;
+                                                background-color: rgba(214, 214, 214, 0.808);
+                                                width: calc(100% - 40px);
+                                                margin-top: 20px;
+                                                margin-bottom: 0px;
+                                                margin-left: 20px;
+                                            }
+                                            
+                                            .bangxephang a {
+                                                width: 40%;
+                                                float: left;
+                                                margin-left: 30%;
+                                                font-size: 10pt;
+                                                color: #3c9785;
+                                                margin-bottom: 10px;
+                                                margin-top: 10px;
+                                                text-decoration: none;
+                                            }
+                                            
+                                            .tabview {
+                                                width: 77%;
+                                                float: left;
+                                                margin-left: 5%;
+                                                min-height: 50px;
+                                            }
+                                            
+                                            .tabview li {
+                                                float: left;
+                                                text-align: center;
+                                                width: 20%;
+                                                margin-top: 25px;
+                                                font-size: 10pt;
+                                                list-style: none;
+                                            }
+                                            
+                                            .tabview li:hover {
+                                                color: #3c9785;
+                                            }
+                                            
+                                            .tabview .truyendai {
+                                                float: left;
+                                                text-align: center;
+                                                margin-right: 0px;
+                                                width: 153px;
+                                            }
+                                            
+                                            .tabview .alll {
+                                                width: 50px;
+                                                color: #3c9785;
+                                            }
+                                            
+                                            .tabview .kn {
+                                                width: 105px;
+                                            }
+                                            
+                                            .tabview .hd {
+                                                width: 70px;
+                                            }
+                                            
+                                            .tabview .nc {
+                                                width: 100px;
+                                            }
+                                            
+                                            .tabview .qt {
+                                                width: 120px;
+                                            }
+                                            
+                                            .rowoner .buttonn {
+                                                width: 40px;
+                                                float: left;
+                                                box-shadow: #3c9785 2px 0px 8px;
+                                                margin-top: 5px;
+                                                margin-left: 88px;
+                                                min-height: 5px;
+                                                border-radius: 1px;
+                                                margin-bottom: 50px;
+                                                background-color: #3c9785;
+                                            }
+                                            
+                                            .bg {
+                                                min-height: 1520px;
+                                            }
+                                            
+                                            .boxdanhmucc {
+                                                float: left;
+                                                width: 22.5%;
+                                                border-radius: 5px;
+                                                font-family: 'Open Sans', sans-serif;
+                                                min-height: 610px;
+                                                box-shadow: gray 0px 0px 3px;
+                                                background-color: #ffffff;
+                                            }
+                                            
+                                            .boxdanhmucc li {
+                                                float: left;
+                                                text-align: left;
+                                                list-style: none;
+                                                min-height: 40px;
+                                                width: 65%;
+                                                color: rgb(36, 36, 36);
+                                                margin-left: 13px;
+                                                margin-top: 10px;
+                                                font-family: 'Open Sans', sans-serif;
+                                                font-size: 10pt;
+                                            }
+                                            
+                                            .bettwen {
+                                                margin-top: 5px;
+                                            }
+                                            
+                                            .boxdanhmucc .danhmuc {
+                                                float: left;
+                                                text-align: left;
+                                                font-size: 12pt;
+                                                width: 75%;
+                                                font-weight: 700;
+                                                margin-left: 12px;
+                                                font-family: 'Open Sans', sans-serif;
+                                                margin-top: 10px;
+                                            }
+                                            
+                                            .boxdanhmucc .btn {
+                                                border: none;
+                                                float: right;
+                                                margin-right: 10px;
+                                                margin-top: 10px;
+                                                color: rgb(70, 69, 69);
+                                                font-size: 18px;
+                                                background-color: #ffffff;
+                                            }
+                                            
+                                            .boxdanhmucc span {
+                                                width: 15%;
+                                                text-align: right;
+                                                font-size: 9pt;
+                                                color: rgb(122, 122, 122);
+                                                margin-top: 15px;
+                                                float: left;
+                                                margin-left: 10%;
+                                            }
+                                            
+                                            .boxdanhmucc hr {
+                                                min-height: 1px;
+                                                border: none;
+                                                background-color: rgba(214, 214, 214, 0.808);
+                                                width: calc(100% - 27px);
+                                                float: left;
+                                                margin-top: 3px;
+                                                margin-bottom: 0px;
+                                                margin-left: 13px;
+                                            }
+                                            
+                                            .tabvieww {
+                                                width: 77%;
+                                                float: left;
+                                                margin-left: 5%;
+                                                min-height: 50px;
+                                            }
+                                            
+                                            .tabvieww li {
+                                                float: left;
+                                                text-align: center;
+                                                width: 20%;
+                                                margin-top: 20px;
+                                                font-size: 10pt;
+                                                list-style: none;
+                                            }
+                                            
+                                            .tabvieww .ttn {
+                                                float: left;
+                                                text-align: center;
+                                                margin-right: 0px;
+                                                width: 103px;
+                                            }
+                                            
+                                            .tabvieww .allll {
+                                                width: 50px;
+                                                color: #3c9785;
+                                            }
+                                            
+                                            .tabvieww .td {
+                                                width: 85px;
+                                            }
+                                            
+                                            .tabvieww .pt {
+                                                width: 120px;
+                                            }
+                                            
+                                            .tabvieww .bq {
+                                                width: 120px;
+                                            }
+                                            
+                                            .tabvieww .hg {
+                                                width: 120px;
+                                            }
+                                            
+                                            .rowoner .noidungg {
+                                                float: left;
+                                                width: 190px;
+                                                min-height: 265px;
+                                                border: 1px #bebebe00 solid;
+                                                text-align: left;
+                                                border-radius: 5px;
+                                                position: absolute;
+                                                background-color: #ffffff;
+                                                box-shadow: gray 0px 0px 5px;
+                                            }
+                                            
+                                            .noidungg:hover {
+                                                border: 1px #3c9785 solid;
+                                                transition: 0.5s;
+                                            }
+                                            
+                                            .noidungg .rtimgg img {
+                                                width: 100%;
+                                                box-shadow: gray 0px 0px 5px;
+                                                position: relative;
+                                            }
+                                            
+                                            .noidungg .rtimgg {
+                                                float: left;
+                                                position: relative;
+                                                width: 120px;
+                                                top: -20px;
+                                                left: 35px;
+                                                min-height: 175px;
+                                            }
+                                            
+                                            .rowoner hr {
+                                                width: 97%;
+                                                min-height: 1px;
+                                                text-align: center;
+                                                border: none;
+                                                background-color: rgb(241, 241, 241);
+                                                margin: 0 auto;
+                                            }
+                                            
+                                            .noidungg a {
+                                                text-decoration: none;
+                                                float: left;
+                                                color: rgb(49, 49, 49);
+                                                margin-top: -10px;
+                                                padding: 0px 20px;
+                                                font-size: 9pt;
+                                                min-height: 30px;
+                                                width: 80%;
+                                            }
+                                            
+                                            .noidungg nav {
+                                                float: left;
+                                                margin-top: 5px;
+                                                width: 90%;
+                                                color: rgb(48, 48, 48);
+                                                font-size: 9pt;
+                                                margin-left: 22px;
+                                                min-height: 20px;
+                                            }
+                                            
+                                            .noidungg hr {
+                                                float: left;
+                                                width: 80%;
+                                                margin-left: 10%;
+                                                min-height: 0.5px;
+                                                margin-top: 3px;
+                                                border: none;
+                                                background-color: rgb(241, 241, 241);
+                                            }
+                                            
+                                            .noidungg ins {
+                                                text-decoration: none;
+                                                font-size: 9pt;
+                                                margin-left: 20px;
+                                                float: left;
+                                                font-weight: 600;
+                                                color: #a5a5a5;
+                                                margin-top: 5px;
+                                            }
+                                            
+                                            .noidungg:hover .iconbookk {
+                                                display: block;
+                                                transition: 1s;
+                                            }
+                                            
+                                            .noidungg .iconbookk {
+                                                float: left;
+                                                border-radius: 20px;
+                                                position: absolute;
+                                                margin-left: 83px;
+                                                border: white 1px solid;
+                                                margin-top: 50px;
+                                                display: none;
+                                            }
+                                            
+                                            .noidungg .iconbookk i {
+                                                color: #3c9785;
+                                            }
+                                            
+                                            .noidungg .chitiett {
+                                                float: left;
+                                                width: 101%;
+                                                margin-top: -149px;
+                                                border-radius: 1px;
+                                                min-height: 50px;
+                                                display: none;
+                                                color: white;
+                                                font-size: 9pt;
+                                                position: relative;
+                                                background-color: #3c9785;
+                                            }
+                                            
+                                            .noidungg .chitiett span {
+                                                text-align: center;
+                                                width: 150px;
+                                                margin-top: 5px;
+                                                float: left;
+                                                margin-left: 20px;
+                                            }
+                                            
+                                            .noidungg .chitiett p {
+                                                text-align: center;
+                                                width: 180px;
+                                                margin-top: 5px;
+                                                float: left;
+                                                margin-left: 10px;
+                                            }
+                                            
+                                            .noidungg:hover .chitiett {
+                                                display: block;
+                                                transition: 1s;
+                                            }
+                                            
+                                            .rowfour {
+                                                width: 100%;
+                                                margin-top: 50px;
+                                                float: left;
+                                            }
+                                            
+                                            .rowfour .content {
+                                                width: 75%;
+                                                margin-top: 10px;
+                                                position: relative;
+                                                min-height: 550px;
+                                                margin-left: 12.5%;
+                                                float: left;
+                                            }
+                                            
+                                            .rowfour .boximgg img {
+                                                width: 100%;
+                                                position: absolute;
+                                            }
+                                            
+                                            .rowfour .truyentranh {
+                                                position: relative;
+                                                width: 222px;
+                                                text-shadow: black 0px 2px 2px;
+                                                font-size: 23pt;
+                                                float: left;
+                                                color: white;
+                                                margin-left: 40%;
+                                                margin-right: 40%;
+                                                font-weight: 900;
+                                                padding: 15px 10px;
+                                                border: black 3px solid;
+                                            }
+                                            
+                                            .rowfour .content li {
+                                                float: left;
+                                                width: 220px;
+                                                margin-top: 10px;
+                                                border-radius: 10px;
+                                                list-style: none;
+                                                margin-left: 50px;
+                                                background-color: rgb(36, 37, 37);
+                                            }
+                                            
+                                            .rowfour .content h4 {
+                                                float: left;
+                                                color: rgb(36, 37, 37);
+                                                width: 220px;
+                                                margin-left: 50px;
+                                                text-align: center;
+                                                margin-top: 5px;
+                                                border-radius: 10px;
+                                                background-color: #dddddd;
+                                                min-height: 20px;
+                                            }
+                                            
+                                            .rowfour .content p {
+                                                min-height: 10px;
+                                                margin-top: 5px;
+                                                margin-bottom: 5px;
+                                            }
+                                            
+                                            .rowfour .content li:hover {
+                                                background-color: #dddddd;
+                                                transition: 1s;
+                                            }
+                                            
+                                            .rowfour .content li img {
+                                                width: 82%;
+                                                padding: 20px 20px;
+                                            }
+                                            
+                                            .rowfive .banchay {
+                                                float: left;
+                                                min-height: 50px;
+                                                width: 100%;
+                                            }
+                                            
+                                            .rowfive {
+                                                background-color: #ffffff;
+                                                text-align: center;
+                                                width: 75%;
+                                                margin: 0 auto;
+                                                min-height: 350px;
+                                                margin-top: 50px;
+                                                clear: both;
+                                            }
+                                            
+                                            .banchay .newinweek {
+                                                float: left;
+                                                margin-top: 15px;
+                                                margin-left: 15px;
+                                                font-size: 14pt;
+                                                color: rgb(32, 32, 32);
+                                                font-weight: 600;
+                                            }
+                                            
+                                            .banchay .viewall {
+                                                float: right;
+                                                margin-right: 15px;
+                                                font-size: 10pt;
+                                                color: #3c9785;
+                                                margin-top: 20px;
+                                                font-weight: 600;
+                                            }
+                                            
+                                            .rowfive hr {
+                                                width: 97%;
+                                                min-height: 1px;
+                                                text-align: center;
+                                                border: none;
+                                                background-color: rgb(241, 241, 241);
+                                                margin: 0 auto;
+                                            }
+                                            
+                                            .rowfive .noidunggg {
+                                                width: 150px;
+                                                float: left;
+                                                margin-left: 30px;
+                                                min-height: 250px;
+                                                border-radius: 5px;
+                                                box-shadow: black 0px 0px 3px;
+                                                margin-top: 20px;
+                                            }
+                                            
+                                            .rowfive .noidunggg .boximggg {
+                                                width: calc(100% - 30px);
+                                                float: left;
+                                                margin-top: 15px;
+                                                margin-bottom: 15px;
+                                                min-height: 175px;
+                                                margin-left: 15px;
+                                            }
+                                            
+                                            .rowfive .noidunggg .boximggg img {
+                                                width: 100%;
+                                            }
+                                            
+                                            .rowfive .noidunggg .linee {
+                                                width: 100%;
+                                                float: left;
+                                                margin-bottom: 10px;
+                                                min-height: 2px;
+                                                background-color: #3c9785;
+                                            }
+                                            
+                                            .rowfive .noidunggg p {
+                                                text-align: center;
+                                                width: 100px;
+                                                margin: 0 auto;
+                                            }
+                                            
+                                            .rowsix .chonloc {
+                                                float: left;
+                                                min-height: 50px;
+                                                width: 100%;
+                                            }
+                                            
+                                            .rowsix {
+                                                background-color: white;
+                                                text-align: center;
+                                                width: 75%;
+                                                margin: 0 auto;
+                                                min-height: 320px;
+                                                margin-top: 50px;
+                                                margin-bottom: 50px;
+                                                clear: both;
+                                            }
+                                            
+                                            .rowsix .newinweek {
+                                                float: left;
+                                                padding: 20px 10px;
+                                                color: gray;
+                                                font-weight: 600;
+                                            }
+                                            
+                                            .rowsix .viewall {
+                                                float: right;
+                                                font-size: 10pt;
+                                                padding: 20px 10px;
+                                                color: #ff9900;
+                                                font-weight: 600;
+                                            }
+                                            
+                                            .rowsix hr {
+                                                width: 97%;
+                                                min-height: 1px;
+                                                text-align: center;
+                                                border: none;
+                                                background-color: rgb(241, 241, 241);
+                                                margin: 0 auto;
+                                            }
+                                            
+                                            .rowsix .nd {
+                                                float: left;
+                                                width: 23%;
+                                                margin-left: 1.6%;
+                                                margin-top: 20px;
+                                                min-height: 100px;
+                                            }
+                                            
+                                            .rowsix .nd img {
+                                                width: 100%;
+                                                position: relative;
+                                                border-radius: 10px;
+                                            }
+                                            
+                                            .rowsix .nd .tex {
+                                                position: relative;
+                                                float: left;
+                                                top: -200px;
+                                                font-size: 8pt;
+                                                padding: 10px 10px;
+                                                color: #ff9900;
+                                                border-bottom-left-radius: 10px;
+                                                border-bottom-right-radius: 10px;
+                                                width: 92%;
+                                                line-height: 20px;
+                                                z-index: -9;
+                                                font-weight: 600;
+                                                background-color: #dbdbdb4d;
+                                            }
+                                            
+                                            .rowsix .nd:hover .tex {
+                                                top: -5px;
+                                                transition: 0.7s;
+                                                z-index: 9;
+                                            }
+                                            
+                                            .nhagiakim {
+                                                width: 100%;
+                                                text-align: center;
+                                                margin-top: 50px;
+                                                color: white;
+                                                min-height: 140px;
+                                                float: left;
+                                                background-color: #1ba085;
+                                            }
+                                            
+                                            .nhagiakim nav {
+                                                width: 65%;
+                                                margin-left: 20%;
+                                                margin-top: 20px;
+                                                min-height: 30px;
+                                            }
+                                            
+                                            .nhagiakim p {
+                                                width: 60%;
+                                                min-height: 30px;
+                                                margin-top: 80px;
+                                                margin-left: 25%;
+                                            }
+                                            
+                                            .nhagiakim s {
+                                                float: left;
+                                                font-size: 50pt;
+                                                width: 10%;
+                                                clear: both;
+                                                margin-left: 15%;
+                                                margin-top: -40px;
+                                            }
+                                            
+                                            footer {
+                                                text-align: left;
+                                                margin: 0 auto;
+                                                width: 100%;
+                                                clear: both;
+                                                background-color: white;
+                                                min-height: 350px;
+                                            }
+                                            
+                                            footer .container {
+                                                width: 75%;
+                                            }
+                                            
+                                            footer .tthi {
+                                                float: left;
+                                                width: 23%;
+                                                margin-top: 30px;
+                                                min-height: 250px;
+                                            }
+                                            
+                                            footer .uddd {
+                                                float: left;
+                                                width: 23%;
+                                                margin-top: 30px;
+                                                min-height: 250px;
+                                            }
+                                            
+                                            footer .tthi .tt {
+                                                width: 100%;
+                                                float: left;
+                                                font-size: 13pt;
+                                                font-weight: 600;
+                                                text-align: left;
+                                            }
+                                            
+                                            footer .tthi a {
+                                                width: 100%;
+                                                float: left;
+                                                font-size: 10pt;
+                                                margin-top: 10px;
+                                                text-decoration: none;
+                                                text-align: left;
+                                                color: black;
+                                            }
+                                            
+                                            footer .tthi .lg {
+                                                float: left;
+                                                width: 50%;
+                                                margin-top: 10px;
+                                                min-height: 10px;
+                                            }
+                                            
+                                            footer .tthi p {
+                                                width: 60%;
+                                                margin-top: 0px;
+                                                font-size: 10pt;
+                                                float: left;
+                                            }
+                                            
+                                            footer .tthi .lq img {
+                                                width: 100%;
+                                            }
+                                            
+                                            footer .ttlh {
+                                                float: left;
+                                                width: 50%;
+                                                margin-top: 30px;
+                                                margin-left: 2%;
+                                                margin-right: 2%;
+                                                min-height: 250px;
+                                            }
+                                            
+                                            footer .ttlh .tt {
+                                                width: 100%;
+                                                float: left;
+                                                font-size: 13pt;
+                                                font-weight: 600;
+                                                text-align: left;
+                                            }
+                                            
+                                            footer .ttlh .company {
+                                                width: 100%;
+                                                line-height: 20px;
+                                                float: left;
+                                                width: 100%;
+                                                margin-top: 10px;
+                                                float: left;
+                                                font-size: 10pt;
+                                            }
+                                            
+                                            footer .ttlh .iconfb i {
+                                                background-color: #4267b2;
+                                                width: 11px;
+                                                height: 11px;
+                                                margin-top: 20px;
+                                                color: white;
+                                                float: left;
+                                                padding: 10px 10px;
+                                                border-radius: 50px;
+                                            }
+                                            
+                                            footer .ttlh .logobct {
+                                                width: 100px;
+                                                margin-top: 10px;
+                                                float: left;
+                                                margin-left: 50px;
+                                            }
+                                            
+                                            footer .uddd {
+                                                float: left;
+                                                width: 23%;
+                                                margin-top: 30px;
+                                                min-height: 250px;
+                                            }
+                                            
+                                            footer .uddd .tt {
+                                                width: 100%;
+                                                float: left;
+                                                font-size: 13pt;
+                                                margin-bottom: 20px;
+                                                font-weight: 600;
+                                                text-align: left;
+                                            }
+                                            
+                                            footer .uddd .qr {
+                                                width: 30%;
+                                                float: left;
+                                                clear: both;
+                                            }
+                                            
+                                            footer .uddd .tet {
+                                                width: 55%;
+                                                float: left;
+                                                margin-bottom: 10px;
+                                                font-size: 9pt;
+                                                min-height: 80px;
+                                                line-height: 20px;
+                                                color: rgb(77, 77, 77);
+                                                font-weight: 600;
+                                                margin-left: 5%;
+                                            }
+                                            
+                                            footer .uddd .qr img {
+                                                width: 100%;
+                                            }
+                                            
+                                            footer .uddd .logodma {
+                                                width: 100px;
+                                                margin-top: 10px;
+                                                float: left;
+                                            }
+                                            
+                                            footer .uddd .logodma img {
+                                                width: 100%;
+                                            }
+                                            
+                                            nav {
+                                                color: #444444;
+                                            }
+                                            
+                                            ins {
+                                                text-decoration: none;
+                                                font-size: 10pt;
+                                                float: left;
+                                                margin-right: 5px;
+                                                margin-top: 5px;
+                                            }
+                                            
+                                            p {
+                                                font-size: 15pt;
+                                                width: 98%;
+                                                margin-left: -7px;
+                                                margin-top: -10px;
+                                                padding: 10px 10px;
+                                                background-color: #cccccc;
+                                                color: #444444;
+                                            }
+                                            
+                                            span {
+                                                color: #7f7f7f;
+                                            }
+                                            
+                                            button {
+                                                border: none;
+                                                float: right;
+                                                background-color: #f5f5f5;
+                                                color: #4d7bae;
+                                            }
+                                            
+                                            hr {
+                                                border: none;
+                                                width: 93%;
+                                                min-height: 2px;
+                                                margin-top: -4px;
+                                                background-color: #8c8c8c;
+                                            }
+                                            
+                                            .name input {
+                                                border: none;
+                                                padding: 10px 10px;
+                                                margin-left: 5px;
+                                            }
+                                            
+                                            .noidung textarea {
+                                                width: 90%;
+                                                margin-top: 10px;
+                                                background-color: #f5f5f5;
+                                                padding: 10px 10px;
+                                                border: none;
+                                            }
+                                            
+                                            .container_cgr {
+                                                width: 75%;
+                                                margin: 0 auto;
+                                                text-align: center;
+                                                height: 250px;
+                                                clear: both;
+                                                margin-bottom: 50px;
+                                                background-color: white;
+                                            }
+                                            
+                                            .container_cgr .danhmuc {
+                                                float: left;
+                                                width: 100%;
+                                                padding: 20px 10px;
+                                                text-align: left;
+                                                color: gray;
+                                                font-weight: 600;
+                                                margin-bottom: 20px;
+                                            }
+                                            
+                                            .container_cgr .box_cgr {
+                                                width: calc(10% - 3px);
+                                                float: left;
+                                                background-color: white;
+                                                border: 1.5px #f5f5f5 solid;
+                                                height: 130px;
+                                            }
+                                            
+                                            .container_cgr .box_cgr:hover {
+                                                box-shadow: #c9c9c9 0px 0px 3px;
+                                                transition: 0.2s;
+                                            }
+                                            
+                                            .container_cgr .box_cgr img {
+                                                width: 70%;
+                                            }
+                                            
+                                            .container_cgr .box_cgr li {
+                                                list-style: none;
+                                                color: rgb(92, 92, 92);
+                                                font-size: 11pt;
+                                                font-weight: 600;
+                                            }
+                                            
+                                            .container_cgr .box_cgr .countsp {
+                                                position: relative;
+                                                z-index: -9;
+                                                width: 100px;
+                                                height: 20px;
+                                                top: 0px;
+                                                font-size: 10pt;
+                                                border-radius: 10px;
+                                                color: white;
+                                                background-color: #ff7300e8;
+                                                margin: 0 auto;
+                                                text-align: center;
+                                            }
+                                            
+                                            .container_cgr .box_cgr:hover .countsp {
+                                                z-index: 9;
+                                                top: 35px;
+                                                transition: 0.7s;
+                                            }
+                                            
+                                            .container_cgr .box_cgr:hover .more {
+                                                top: 15px;
+                                                transition: 0.5s;
+                                            }
+                                            
+                                            footer .tthi .lg img {
+                                                width: 100%;
+                                            }
+                                            
+                                            .boxcart {
+                                                top: 50px;
+                                                right: 0px;
+                                                position: fixed;
+                                                padding: 5px 5px;
+                                                z-index: 1000;
+                                                border-radius: 5px;
+                                                font-size: 10pt;
+                                                background-color: #3c9785fb;
+                                                border: 1px gray solid;
+                                            }
+                                            
+                                            .boxcart hr {
+                                                width: 100%;
+                                                float: left;
+                                                z-index: 2000;
+                                                background-color: white;
+                                                border: none;
+                                            }
+                                            
+                                            .noidung button {
+                                                width: 30px;
+                                                height: 40px;
+                                                border-radius: 5px;
+                                                opacity: 0;
+                                                position: absolute;
+                                            }
+                                            
+                                            .deletebtn {
+                                                border: none;
+                                                border-radius: 2px;
+                                                background-color: rgb(235, 33, 33);
+                                                color: white;
+                                                margin-right: 15px;
+                                                text-align: center;
+                                            }
+                                            
+                                            .reduce {
+                                                float: left;
+                                            }
+                                            
+                                            .add {
+                                                float: none;
+                                            }
+                                            
+                                            .btn {
+                                                border: none;
+                                                border-radius: 2px;
+                                                background-color: #0b5ed7;
+                                                color: white;
+                                                text-align: center;
+                                            }
+                                            
+                                            .number {
+                                                width: 10px;
+                                                margin-left: 3px;
+                                                border: none;
+                                                color: white;
+                                                background-color: #0b5dd700;
+                                            }
+                                            
+                                            .btn-success {
+                                                height: 30px;
+                                                font-size: 11pt;
+                                                border-radius: 5px;
+                                                width: 80px;
+                                            }
+                                            
+                                            .btn-success:hover {
+                                                opacity: 0.9;
+                                            }
+                                            
+                                            .total {
+                                                float: right;
+                                            }
